@@ -7,6 +7,7 @@ Describe #complete
     \               'ALv2',
     \               'MIT',
     \               'MPLv2',
+    \               'Unlicense',
     \             ])
   End
 
