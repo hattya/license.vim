@@ -4,6 +4,7 @@ Describe #complete
   It lists all licenses
     Assert Equals(license#complete('', 'License ', 8),
     \             [
+    \               'ALv2',
     \               'MIT',
     \             ])
   End
@@ -47,6 +48,22 @@ Describe #load
 
   After each
     call g.restore()
+  End
+
+  It loads the Apache License, Version 2.0
+    for n in ['ALv2', toupper('ALv2'), tolower('ALv2')]
+      let lic = license#load(n)
+      Assert LengthOf(lic, 3)
+
+      Assert HasKey(lic, 'name')
+      Assert Equals(lic.name, 'Apache License, Version 2.0')
+
+      Assert HasKey(lic, 'text')
+      Assert LengthOf(split(lic.text, '\n'), 11)
+
+      Assert HasKey(lic, 'wrap')
+      Assert False(lic.wrap)
+    endfor
   End
 
   It loads the MIT License
