@@ -1,0 +1,330 @@
+scriptencoding utf-8
+
+Describe #complete
+  It lists all licenses
+    Assert Equals(license#complete('', 'License ', 8),
+    \             [
+    \               'MIT',
+    \             ])
+  End
+
+  It lists no licenses
+    Assert Equals(license#complete('_', 'License _', 9), [])
+  End
+
+  It lists the MIT License
+    for n in ['MIT', 'M*T', 'MI*']
+      let l = 'License ' . n
+      Assert Equals(license#complete(n, l, len(l)), ['MIT'])
+
+      let l = 'License ' . toupper(n)
+      Assert Equals(license#complete(n, l, len(l)), ['MIT'])
+
+      let l = 'License ' . tolower(n)
+      Assert Equals(license#complete(n, l, len(l)), ['MIT'])
+    endfor
+  End
+End
+
+Describe #load
+  Before all
+    let Guard = vital#license#import('Vim.Guard')
+    let path = TempDir()
+
+    call mkdir(Join(path, 'license'))
+    call writefile(['name : "illegal"'], Join(path, 'license', '__illegal__.toml'))
+    call writefile(['name = "empty"'], Join(path, 'license', '__empty__.toml'))
+  End
+
+  After all
+    call RemoveAll(path)
+  End
+
+  Before each
+    let g = Guard.store('&runtimepath')
+    let &runtimepath = path . ',' . &runtimepath
+  End
+
+  After each
+    call g.restore()
+  End
+
+  It loads the MIT License
+    for n in ['MIT', tolower('MIT')]
+      let lic = license#load(n)
+      Assert LengthOf(lic, 3)
+
+      Assert HasKey(lic, 'name')
+      Assert Equals(lic.name, 'MIT License')
+
+      Assert HasKey(lic, 'text')
+      Assert LengthOf(split(lic.text, '\n'), 5)
+
+      Assert HasKey(lic, 'wrap')
+      Assert True(lic.wrap)
+    endfor
+  End
+
+  It throws an exception when the specified license is not found
+    Throws /^license not found:/ :call license#load('_')
+  End
+
+  It throws an exception when the specified license has an illegal format
+    Throws /^illegal toml format at / :call license#load('__illegal__')
+  End
+
+  It throws an exception when the specified license is empty
+    Throws /^empty license:/ :call license#load('__empty__')
+  End
+End
+
+Describe #license
+  Before each
+    call setline(1, range(1, 4))
+    call cursor(2, 1)
+  End
+
+  After each
+    bwipe!
+  End
+
+  It inserts a license before the first line
+    0License MIT
+    Assert Equals(line('.'), 2)
+    Assert Equals(line('$'), 9)
+
+    Assert  Match(getline(1), '^\S')
+    Assert Equals(getline(2), '')
+    Assert  Match(getline(3), '^\S')
+    Assert Equals(getline(4), '')
+    Assert  Match(getline(5), '^\S')
+    Assert Equals(getline(6), '1')
+    Assert Equals(getline(7), '2')
+    Assert Equals(getline(8), '3')
+    Assert Equals(getline(9), '4')
+  End
+
+  It inserts a license to the current line
+    License MIT
+    Assert Equals(line('.'), 2)
+    Assert Equals(line('$'), 9)
+
+    Assert Equals(getline(1), '1')
+    Assert Equals(getline(2), '2')
+    Assert  Match(getline(3), '^\S')
+    Assert Equals(getline(4), '')
+    Assert  Match(getline(5), '^\S')
+    Assert Equals(getline(6), '')
+    Assert  Match(getline(7), '^\S')
+    Assert Equals(getline(8), '3')
+    Assert Equals(getline(9), '4')
+  End
+
+  It inserts a license after the last line
+    $License MIT
+    Assert Equals(line('.'), 2)
+    Assert Equals(line('$'), 9)
+
+    Assert Equals(getline(1), '1')
+    Assert Equals(getline(2), '2')
+    Assert Equals(getline(3), '3')
+    Assert Equals(getline(4), '4')
+    Assert  Match(getline(5), '^\S')
+    Assert Equals(getline(6), '')
+    Assert  Match(getline(7), '^\S')
+    Assert Equals(getline(8), '')
+    Assert  Match(getline(9), '^\S')
+  End
+
+  It replaces the specified range (%) by a license
+    %License MIT
+    Assert Equals(line('.'), 2)
+    Assert Equals(line('$'), 5)
+
+    Assert  Match(getline(1), '^\S')
+    Assert Equals(getline(2), '')
+    Assert  Match(getline(3), '^\S')
+    Assert Equals(getline(4), '')
+    Assert  Match(getline(5), '^\S')
+  End
+
+  It replaces the specified range (0,1) by a license
+    0,1License MIT
+    Assert Equals(line('.'), 2)
+    Assert Equals(line('$'), 8)
+
+    Assert  Match(getline(1), '^\S')
+    Assert Equals(getline(2), '')
+    Assert  Match(getline(3), '^\S')
+    Assert Equals(getline(4), '')
+    Assert  Match(getline(5), '^\S')
+    Assert Equals(getline(6), '2')
+    Assert Equals(getline(7), '3')
+    Assert Equals(getline(8), '4')
+  End
+
+  It replaces the specified range (0,2) by a license
+    0,2License MIT
+    Assert Equals(line('.'), 2)
+    Assert Equals(line('$'), 7)
+
+    Assert  Match(getline(1), '^\S')
+    Assert Equals(getline(2), '')
+    Assert  Match(getline(3), '^\S')
+    Assert Equals(getline(4), '')
+    Assert  Match(getline(5), '^\S')
+    Assert Equals(getline(6), '3')
+    Assert Equals(getline(7), '4')
+  End
+
+  It replaces the specified range (2,3) by a license
+    2,3License MIT
+    Assert Equals(line('.'), 2)
+    Assert Equals(line('$'), 7)
+
+    Assert Equals(getline(1), '1')
+    Assert  Match(getline(2), '^\S')
+    Assert Equals(getline(3), '')
+    Assert  Match(getline(4), '^\S')
+    Assert Equals(getline(5), '')
+    Assert  Match(getline(6), '^\S')
+    Assert Equals(getline(7), '4')
+  End
+
+  It replaces the specified range ($,$+1) by a license
+    $,$+1License MIT
+    Assert Equals(line('.'), 2)
+    Assert Equals(line('$'), 8)
+
+    Assert Equals(getline(1), '1')
+    Assert Equals(getline(2), '2')
+    Assert Equals(getline(3), '3')
+    Assert  Match(getline(4), '^\S')
+    Assert Equals(getline(5), '')
+    Assert  Match(getline(6), '^\S')
+    Assert Equals(getline(7), '')
+    Assert  Match(getline(8), '^\S')
+  End
+
+  It replaces the specified range ($-1,$+1) by a license
+    $-1,$+1License MIT
+    Assert Equals(line('.'), 2)
+    Assert Equals(line('$'), 7)
+
+    Assert Equals(getline(1), '1')
+    Assert Equals(getline(2), '2')
+    Assert  Match(getline(3), '^\S')
+    Assert Equals(getline(4), '')
+    Assert  Match(getline(5), '^\S')
+    Assert Equals(getline(6), '')
+    Assert  Match(getline(7), '^\S')
+  End
+
+  It automatically wraps a license using the 'textwidth' (filetype=)
+    setlocal textwidth=78
+    call setline(1, repeat([''], line('$')))
+
+    License MIT
+    Assert Equals(line('.'), 2)
+    Assert Equals(line('$'), 21)
+
+    Assert Equals(getline(1),  '')
+    Assert Equals(getline(2),  '')
+    Assert  Match(getline(3),  '^\S')
+    Assert  Match(getline(4),  '^\S')
+    Assert  Match(getline(5),  '^\S')
+    Assert  Match(getline(6),  '^\S')
+    Assert  Match(getline(7),  '^\S')
+    Assert  Match(getline(8),  '^\S')
+    Assert Equals(getline(9),  '')
+    Assert  Match(getline(10), '^\S')
+    Assert  Match(getline(11), '^\S')
+    Assert Equals(getline(12), '')
+    Assert  Match(getline(13), '^\S')
+    Assert  Match(getline(14), '^\S')
+    Assert  Match(getline(15), '^\S')
+    Assert  Match(getline(16), '^\S')
+    Assert  Match(getline(17), '^\S')
+    Assert  Match(getline(18), '^\S')
+    Assert  Match(getline(19), '^\S')
+    Assert Equals(getline(20), '')
+    Assert Equals(getline(21), '')
+  End
+
+  It automatically wraps a license using the 'textwidth' (filetype=c)
+    setfiletype c
+    setlocal textwidth=78
+    call setline(1, '/*')
+    call setline(2, repeat([' *'], line('$') - 2))
+    call setline('$', ' */')
+
+    License MIT
+    Assert Equals(line('.'), 2)
+    Assert Equals(line('$'), 21)
+
+    Assert Equals(getline(1),  '/*')
+    Assert Equals(getline(2),  ' *')
+    Assert  Match(getline(3),  '^ \* \S')
+    Assert  Match(getline(4),  '^ \* \S')
+    Assert  Match(getline(5),  '^ \* \S')
+    Assert  Match(getline(6),  '^ \* \S')
+    Assert  Match(getline(7),  '^ \* \S')
+    Assert  Match(getline(8),  '^ \* \S')
+    Assert Equals(getline(9),  ' *')
+    Assert  Match(getline(10), '^ \* \S')
+    Assert  Match(getline(11), '^ \* \S')
+    Assert Equals(getline(12), ' *')
+    Assert  Match(getline(13), '^ \* \S')
+    Assert  Match(getline(14), '^ \* \S')
+    Assert  Match(getline(15), '^ \* \S')
+    Assert  Match(getline(16), '^ \* \S')
+    Assert  Match(getline(17), '^ \* \S')
+    Assert  Match(getline(18), '^ \* \S')
+    Assert  Match(getline(19), '^ \* \S')
+    Assert Equals(getline(20), ' *')
+    Assert Equals(getline(21), ' */')
+  End
+
+  It automatically wraps a license using the 'textwidth' (filetype=python)
+    setfiletype python
+    setlocal textwidth=78
+    call setline(1, repeat(['#'], line('$')))
+
+    License MIT
+    Assert Equals(line('.'), 2)
+    Assert Equals(line('$'), 21)
+
+    Assert Equals(getline(1),  '#')
+    Assert Equals(getline(2),  '#')
+    Assert  Match(getline(3),  '^# \S')
+    Assert  Match(getline(4),  '^# \S')
+    Assert  Match(getline(5),  '^# \S')
+    Assert  Match(getline(6),  '^# \S')
+    Assert  Match(getline(7),  '^# \S')
+    Assert  Match(getline(8),  '^# \S')
+    Assert Equals(getline(9),  '#')
+    Assert  Match(getline(10), '^# \S')
+    Assert  Match(getline(11), '^# \S')
+    Assert Equals(getline(12), '#')
+    Assert  Match(getline(13), '^# \S')
+    Assert  Match(getline(14), '^# \S')
+    Assert  Match(getline(15), '^# \S')
+    Assert  Match(getline(16), '^# \S')
+    Assert  Match(getline(17), '^# \S')
+    Assert  Match(getline(18), '^# \S')
+    Assert  Match(getline(19), '^# \S')
+    Assert Equals(getline(20), '#')
+    Assert Equals(getline(21), '#')
+  End
+
+  It causes an error
+    License _
+    Assert Equals(line('.'), 2)
+    Assert Equals(line('$'), 4)
+
+    Assert Equals(getline(1), '1')
+    Assert Equals(getline(2), '2')
+    Assert Equals(getline(3), '3')
+    Assert Equals(getline(4), '4')
+  End
+End
