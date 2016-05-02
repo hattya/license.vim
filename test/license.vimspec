@@ -347,3 +347,49 @@ Describe #license
     Assert Equals(getline(4), '4')
   End
 End
+
+Describe #name
+  Before each
+    let b:license_lines = 1
+
+    setfiletype vim
+    call append('$', '" License: ')
+    call append('$', '')
+  End
+
+  After each
+    bwipe!
+  End
+
+  It inserts a license name to the buffer (first 'b:license_lines' lines)
+    1delete _
+
+    call license#name('MIT')
+    Assert Equals(line('.'), 1)
+    Assert Equals(line('$'), 2)
+
+    Assert  Match(getline(1), '^" License: \S')
+    Assert Equals(getline(2), '')
+  End
+
+  It inserts a license name to the buffer (last 'b:license_lines' lines)
+    3delete _
+
+    call license#name('MIT')
+    Assert Equals(line('.'), 2)
+    Assert Equals(line('$'), 2)
+
+    Assert Equals(getline(1), '')
+    Assert  Match(getline(2), '^" License: \S')
+  End
+
+  It does not change the buffer
+    call license#name('MIT')
+    Assert Equals(line('.'), 1)
+    Assert Equals(line('$'), 3)
+
+    Assert Equals(getline(1), '')
+    Assert Equals(getline(2), '" License: ')
+    Assert Equals(getline(3), '')
+  End
+End

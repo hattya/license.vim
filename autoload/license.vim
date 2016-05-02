@@ -1,6 +1,6 @@
 " File:        autoload/license.vim
 " Author:      Akinori Hattori <hattya@gmail.com>
-" Last Change: 2016-04-30
+" Last Change: 2016-05-02
 " License:     MIT License
 
 let s:save_cpo = &cpo
@@ -66,6 +66,49 @@ function! license#license(name, line1, line2) abort
   endtry
 endfunction
 
+function! license#name(...) abort
+  if !&modified
+    return
+  endif
+
+  let name = get(a:000, 0, '')
+
+  let pos = getpos('.')
+  try
+    let pre = s:getvar('license_keyword_pre', '\cLicense:')
+    let post = s:getvar('license_keyword_post', '$')
+    let pat = pre .'\s*\zs\ze' . post
+    let lines = s:getvar('license_lines', 10)
+    let lic = {}
+    for lnum in [1, max([line('$') - lines, lines]) + 1]
+      let stopline = min([lnum + lines - 1, line('$')])
+      while lnum <= stopline
+        call cursor(lnum, 1)
+        let lnum = search(pat, 'cW', stopline)
+        if lnum == 0
+          break
+        elseif empty(lic)
+          if name ==# ''
+            let name = s:input()
+            if name ==# ''
+              return
+            endif
+          endif
+          try
+            let lic = license#load(name)
+          catch
+            return s:error(v:exception)
+          endtry
+        endif
+        call setline(lnum, substitute(getline(lnum), pat, lic.name, ''))
+        let lnum += 1
+      endwhile
+    endfor
+  finally
+    call setpos('.', pos)
+  endtry
+endfunction
+
 function! s:getvar(name, ...) abort
   return get(b:, a:name, get(g:, a:name, 0 < a:0 ? a:1 : 0))
 endfunction
@@ -75,6 +118,13 @@ function! s:error(msg) abort
   echohl ErrorMsg
   echomsg 'license: ' . a:msg
   echohl None
+endfunction
+
+function! s:input() abort
+  echohl Question
+  let s = input('License: ', '', 'customlist,license#complete')
+  echohl None
+  return s
 endfunction
 
 function! license#load(name) abort
