@@ -5,6 +5,8 @@ Describe #complete
     Assert Equals(license#complete('', 'License ', 8),
     \             [
     \               'ALv2',
+    \               'GPLv2',
+    \               'GPLv2+',
     \               'MIT',
     \               'MPLv2',
     \               'Unlicense',
