@@ -7,6 +7,8 @@ Describe #complete
     \               'ALv2',
     \               'GPLv2',
     \               'GPLv2+',
+    \               'GPLv3',
+    \               'GPLv3+',
     \               'MIT',
     \               'MPLv2',
     \               'Unlicense',
