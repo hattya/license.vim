@@ -11,6 +11,8 @@ Describe #complete
     \               'GPLv3+',
     \               'LGPLv2.1',
     \               'LGPLv2.1+',
+    \               'LGPLv3',
+    \               'LGPLv3+',
     \               'MIT',
     \               'MPLv2',
     \               'Unlicense',
