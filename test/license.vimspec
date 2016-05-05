@@ -4,6 +4,8 @@ Describe #complete
   It lists all licenses
     Assert Equals(license#complete('', 'License ', 8),
     \             [
+    \               'AGPLv3',
+    \               'AGPLv3+',
     \               'ALv2',
     \               'GPLv2',
     \               'GPLv2+',
