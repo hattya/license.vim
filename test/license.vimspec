@@ -9,6 +9,8 @@ Describe #complete
     \               'GPLv2+',
     \               'GPLv3',
     \               'GPLv3+',
+    \               'LGPLv2.1',
+    \               'LGPLv2.1+',
     \               'MIT',
     \               'MPLv2',
     \               'Unlicense',
