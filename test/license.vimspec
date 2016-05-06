@@ -54,7 +54,7 @@ Describe #load
   End
 
   Before each
-    let g = Guard.store('&runtimepath')
+    let g = Guard.store(['&runtimepath'])
     let &runtimepath = path . ',' . &runtimepath
   End
 

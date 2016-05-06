@@ -1,6 +1,6 @@
 " File:        autoload/license.vim
 " Author:      Akinori Hattori <hattya@gmail.com>
-" Last Change: 2016-05-02
+" Last Change: 2016-05-06
 " License:     MIT License
 
 let s:save_cpo = &cpo
@@ -25,7 +25,7 @@ function! license#license(name, line1, line2) abort
   let line1 = max([a:line1, 1])
   let line2 = min([a:line2, line('$')])
 
-  let g = s:G.store('&l:formatoptions', '&l:textwidth')
+  let g = s:G.store(['&l:formatoptions', '&l:textwidth'])
   let pos = getpos('.')
   try
     setlocal formatoptions+=tco
