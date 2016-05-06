@@ -7,6 +7,7 @@ Describe #complete
     \               'AGPLv3',
     \               'AGPLv3+',
     \               'ALv2',
+    \               'BSD-3',
     \               'GPLv2',
     \               'GPLv2+',
     \               'GPLv3',
