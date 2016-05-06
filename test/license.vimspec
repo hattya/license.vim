@@ -18,6 +18,7 @@ Describe #complete
     \               'MIT',
     \               'MPLv2',
     \               'Unlicense',
+    \               'zlib',
     \             ])
   End
 
