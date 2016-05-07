@@ -13,6 +13,7 @@ Describe #complete
     \               'GPLv2+',
     \               'GPLv3',
     \               'GPLv3+',
+    \               'ISC',
     \               'LGPLv2.1',
     \               'LGPLv2.1+',
     \               'LGPLv3',
