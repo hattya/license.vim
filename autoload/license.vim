@@ -22,21 +22,22 @@ function! license#license(name, line1, line2) abort
   catch
     return s:error(v:exception)
   endtry
-  let line1 = max([a:line1, 1])
-  let line2 = min([a:line2, line('$')])
+  let last = line('$')
+  let line1 = max([a:line1, 0])
+  let line2 = min([a:line2, last + 1])
 
   let g = s:G.store(['&l:formatoptions', '&l:textwidth'])
   let pos = getpos('.')
   try
     setlocal formatoptions+=tco
-    call cursor(line1, 1)
+    call cursor(max([line1, 1]), 1)
     " insert
     let sw = s:getvar('license_shiftwidth', 1)
     let ind = repeat(' ', sw)
     let tw = s:getvar('license_textwidth', &textwidth)
     let wrap = 0 < tw && lic.wrap
     setlocal textwidth=0
-    if a:line1 == 0
+    if line1 == 0
       normal! O
       normal! k
     endif
@@ -52,13 +53,15 @@ function! license#license(name, line1, line2) abort
       execute 'normal! a' . (l !=# '' ? ind : '') . s
     endfor
     " delete
-    if a:line1 == a:line2
-      if a:line1 == 0
-        silent! 1delete _
+    if line1 == line2
+      if line1 == 0
+        silent 1 delete _
       endif
-    elseif a:line1 < a:line2
-      execute printf('silent! .+1,+%ddelete _', line2 - a:line1)
-      execute printf('silent! %ddelete _', line1)
+    elseif line1 < line2
+      if line1 < last
+        execute printf('silent .+1,.+%d delete _', min([line2, last]) - line1)
+      endif
+      execute printf('silent %d delete _', line1)
     endif
   finally
     call setpos('.', pos)
@@ -72,6 +75,7 @@ function! license#name(...) abort
   endif
 
   let name = get(a:000, 0, '')
+  let last = line('$')
 
   let pos = getpos('.')
   try
@@ -80,8 +84,8 @@ function! license#name(...) abort
     let pat = pre .'\s*\zs\ze' . post
     let lines = s:getvar('license_lines', 10)
     let lic = {}
-    for lnum in [1, max([line('$') - lines, lines]) + 1]
-      let stopline = min([lnum + lines - 1, line('$')])
+    for lnum in [1, max([last - lines, lines]) + 1]
+      let stopline = min([lnum + lines - 1, last])
       while lnum <= stopline
         call cursor(lnum, 1)
         let lnum = search(pat, 'cW', stopline)
