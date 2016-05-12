@@ -1,16 +1,16 @@
 let s:assert = themis#helper('assert')
 call themis#helper('command').with(s:assert)
 
-let s:is_win = has('win32') || has('win95') || has('win16')
+let s:V = vital#license#import('Prelude')
 
 function! Join(...) abort
-  return join(a:000, s:is_win ? '\' : '/')
+  return join(a:000, s:V.is_windows() ? '\' : '/')
 endfunction
 
 function! RemoveAll(path) abort
   if &shell =~? 'sh$'
     silent call system('rm -rf ' . shellescape(a:path))
-  elseif s:is_win
+  elseif s:V.is_windows()
     let cmd = isdirectory(a:path) ? 'rmdir /S /Q' : 'del'
     silent call system(cmd . ' "' . a:path . '"')
   endif

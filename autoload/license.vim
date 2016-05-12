@@ -1,12 +1,13 @@
 " File:        autoload/license.vim
 " Author:      Akinori Hattori <hattya@gmail.com>
-" Last Change: 2016-05-06
+" Last Change: 2016-05-12
 " License:     MIT License
 
 let s:save_cpo = &cpo
 set cpo&vim
 
 let s:L = vital#license#import('Data.List')
+let s:V = vital#license#import('Prelude')
 let s:TOML = vital#license#import('Text.TOML')
 let s:G = vital#license#import('Vim.Guard')
 
@@ -157,7 +158,7 @@ endfunction
 
 function! s:find(name) abort
   let n = substitute(a:name, '\v(\a)', '[\u\1\l\1]', 'g')
-  return split(globpath(&runtimepath, 'license/' . n . '.toml', 1), '\n')
+  return s:V.globpath(&runtimepath, 'license/' . n . '.toml')
 endfunction
 
 let &cpo = s:save_cpo
