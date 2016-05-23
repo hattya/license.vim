@@ -1,6 +1,6 @@
 " File:        autoload/license.vim
 " Author:      Akinori Hattori <hattya@gmail.com>
-" Last Change: 2016-05-12
+" Last Change: 2016-05-23
 " License:     MIT License
 
 let s:save_cpo = &cpo
@@ -133,9 +133,10 @@ function! s:input() abort
 endfunction
 
 function! license#load(name) abort
-  let files = s:find(a:name)
+  let name = s:trim(a:name)
+  let files = s:find(name)
   if empty(files)
-    throw 'license not found: ' . a:name
+    throw 'license not found: ' . name
   endif
   try
     let lic = get(s:TOML.parse_file(files[0]), 'license', {})
@@ -143,7 +144,7 @@ function! license#load(name) abort
     throw substitute(v:exception, '\v^%(\S+:\s+){2}(\u)', '\l\1', '')
   endtry
   if empty(lic)
-    throw 'empty license: ' . a:name
+    throw 'empty license: ' . name
   endif
   return extend(copy(s:license), lic)
 endfunction
@@ -159,6 +160,10 @@ endfunction
 function! s:find(name) abort
   let n = substitute(a:name, '\v(\a)', '[\u\1\l\1]', 'g')
   return s:V.globpath(&runtimepath, 'license/' . n . '.toml')
+endfunction
+
+function! s:trim(s) abort
+  return matchstr(a:s, '\v^\s*\zs.{-}\ze\s*$')
 endfunction
 
 let &cpo = s:save_cpo
