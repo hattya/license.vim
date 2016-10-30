@@ -1,0 +1,100 @@
+*license.txt*	Insert a license to the buffer
+
+Author:      Akinori Hattori <hattya@gmail.com>
+Repository:  https://github.com/hattya/license.vim
+Last Change: 2016-10-30
+License:     MIT License
+
+CONTENTS					*license-contents*
+
+Introduction					|license-introduction|
+Usage						|license-usage|
+Interface					|license-interface|
+  Variables					|license-variables|
+  Commands					|license-commands|
+Definition					|license-definition|
+
+==============================================================================
+INTRODUCTION					*license-introduction*
+
+*license.vim* is a Vim plugin to insert a license to the buffer, or replace
+the specified range of the buffer by a license.
+
+==============================================================================
+USAGE						*license-usage*
+
+|license.vim| defines |:License| command, and it can use like:
+>
+	" Insert the MIT License to the current position.
+	License MIT
+
+	" Insert the MIT License to line 3.
+	3License MIT
+
+	" Replace line 5 to line 7 by the MIT License.
+	5,7License MIT
+
+	" Replace the range selected by Visual mode by the MIT License.
+	'<,'>License MIT
+
+If the buffer contains the following line:
+
+	License:
+
+|license.vim| asks a license name when writing the buffer. It can be changed
+by |g:license_keyword_pre| and |g:license_keyword_post|.
+
+==============================================================================
+INTERFACE					*license-interface*
+
+------------------------------------------------------------------------------
+VARIABLES					*license-variables*
+
+g:license_shiftwidth				*g:license_shiftwidth*
+b:license_shiftwidth				*b:license_shiftwidth*
+	The number of spaces to use for each line of a license.
+	The default value is 1.
+
+g:license_textwidth				*g:license_textwidth*
+b:license_textwidth				*b:license_textwidth*
+	The maximum line length of a license. It does no effect, when a
+	license definition does not enable line wrapping.
+	The default value is 'textwidth'.
+
+g:license_keyword_pre				*g:license_keyword_pre*
+b:license_keyword_pre				*b:license_keyword_pre*
+	The default value is '\cLicense:'.
+
+g:license_keyword_post				*g:license_keyword_post*
+b:license_keyword_post				*b:license_keyword_post*
+	The default value is '$'.
+
+g:license_lines					*g:license_lines*
+b:license_lines					*b:license_lines*
+	The number of lines for searching the keyword in a buffer.
+	The default value is 10.
+
+------------------------------------------------------------------------------
+COMMANDS					*license-commands*
+
+:[range]License {name}				*:License*
+	Insert a {name} license to the buffer.
+
+==============================================================================
+DEFINITION						*license-definition*
+
+The license definitions are located in license/*.toml, and are loaded from
+'runtimepath'.
+
+The license definition is in the TOML, and like:
+>
+	[license]
+	name = "the name of license"
+	text = "the text of license"
+	wrap = true
+
+Note: The default value of the wrap field is true, so you need to set false to
+disable line wrapping.
+
+==============================================================================
+vim:tw=78:ts=8:ft=help:norl:noet
