@@ -13,6 +13,9 @@ specified range of the buffer by a license.
 .. image:: https://img.shields.io/badge/powered_by-vital.vim-80273f.svg
    :target: https://github.com/vim-jp/vital.vim
 
+.. image:: https://img.shields.io/badge/doc-:h%20license.txt-blue.svg
+   :target: doc/license.txt
+
 
 Installation
 ------------
@@ -46,6 +49,14 @@ vim-plug_
 .. _Vundle: https://github.com/VundleVim/Vundle.vim
 .. _NeoBundle: https://github.com/Shougo/neobundle.vim
 .. _vim-plug: https://github.com/junegunn/vim-plug
+
+
+Usage
+-----
+
+.. code:: vim
+
+   License MIT
 
 
 Testing
