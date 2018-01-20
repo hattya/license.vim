@@ -21,3 +21,9 @@ function! TempDir() abort
   call mkdir(path, 'p')
   return path
 endfunction
+
+if $PROFILE !=# ''
+  execute 'profile start' $PROFILE
+  execute 'profile! file' Join('.', 'autoload', 'license*')
+  execute 'profile! file' Join('.', 'plugin', '*')
+endif
