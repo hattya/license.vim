@@ -10,6 +10,9 @@ specified range of the buffer by a license.
 .. image:: https://ci.appveyor.com/api/projects/status/qwqdt6wm9y03f9ar/branch/master?svg=true
    :target: https://ci.appveyor.com/project/hattya/license-vim
 
+.. image:: https://codecov.io/gh/hattya/license.vim/branch/master/graph/badge.svg
+   :target: https://codecov.io/gh/hattya/license.vim
+
 .. image:: https://img.shields.io/badge/powered_by-vital.vim-80273f.svg
    :target: https://github.com/vim-jp/vital.vim
 
