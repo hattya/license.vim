@@ -348,15 +348,12 @@ Describe #license()
     Assert Equals(getline(21), '#')
   End
 
-  It causes an error
+  It shows an error when the specified license is not found
     License _
-    Assert Equals(line('.'), 2)
-    Assert Equals(line('$'), 4)
-
-    Assert Equals(getline(1), '1')
-    Assert Equals(getline(2), '2')
-    Assert Equals(getline(3), '3')
-    Assert Equals(getline(4), '4')
+    redir => out
+      messages
+    redir END
+    Assert Equals(split(out, '\n')[-1], 'license: license not found: _')
   End
 End
 
@@ -403,5 +400,54 @@ Describe #name()
     Assert Equals(getline(1), '')
     Assert Equals(getline(2), '" License: ')
     Assert Equals(getline(3), '')
+  End
+
+  It does not change the buffer when it is not modified
+    global /^$/ delete _
+    setlocal nomodified
+
+    call license#name('MIT')
+    Assert Equals(line('.'), 1)
+    Assert Equals(line('$'), 1)
+
+    Assert Equals(getline(1), '" License: ')
+  End
+
+  It shows an error when the specified license is not found
+    global /^$/ delete _
+
+    call license#name('_')
+    redir => out
+      messages
+    redir END
+    Assert Equals(split(out, '\n')[-1], 'license: license not found: _')
+  End
+
+  It inserts a license name to the buffer on write
+    if !has('patch-7.4.1150')
+      Skip requires patch 7.4.1150
+    endif
+
+    global /^$/ delete _
+
+    call feedkeys(":call license#name()\<CR>MIT\<CR>", 'tx')
+    Assert Equals(line('.'), 1)
+    Assert Equals(line('$'), 1)
+
+    Assert  Match(getline(1), '" License: \S')
+  End
+
+  It does not change the buffer when there is no input on write
+    if !has('patch-7.4.1150')
+      Skip requires patch 7.4.1150
+    endif
+
+    global /^$/ delete _
+
+    call feedkeys(":call license#name()\<CR>\<CR>", 'tx')
+    Assert Equals(line('.'), 1)
+    Assert Equals(line('$'), 1)
+
+    Assert  Match(getline(1), '" License: ')
   End
 End
