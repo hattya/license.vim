@@ -1,29 +1,26 @@
-scriptencoding utf-8
-
-Describe #complete
+Describe #complete()
   It lists all licenses
-    Assert Equals(license#complete('', 'License ', 8),
-    \             [
-    \               'AGPLv3',
-    \               'AGPLv3+',
-    \               'ALv2',
-    \               'BSD-2',
-    \               'BSD-3',
-    \               'CC0',
-    \               'GPLv2',
-    \               'GPLv2+',
-    \               'GPLv3',
-    \               'GPLv3+',
-    \               'ISC',
-    \               'LGPLv2.1',
-    \               'LGPLv2.1+',
-    \               'LGPLv3',
-    \               'LGPLv3+',
-    \               'MIT',
-    \               'MPLv2',
-    \               'Unlicense',
-    \               'zlib',
-    \             ])
+    Assert Equals(license#complete('', 'License ', 8), [
+    \        'AGPLv3',
+    \        'AGPLv3+',
+    \        'ALv2',
+    \        'BSD-2',
+    \        'BSD-3',
+    \        'CC0',
+    \        'GPLv2',
+    \        'GPLv2+',
+    \        'GPLv3',
+    \        'GPLv3+',
+    \        'ISC',
+    \        'LGPLv2.1',
+    \        'LGPLv2.1+',
+    \        'LGPLv3',
+    \        'LGPLv3+',
+    \        'MIT',
+    \        'MPLv2',
+    \        'Unlicense',
+    \        'zlib',
+    \      ])
   End
 
   It lists no licenses
@@ -44,13 +41,13 @@ Describe #complete
   End
 End
 
-Describe #load
+Describe #load()
   Before all
     let G = vital#license#import('Vim.Guard')
     let path = TempDir()
 
     call mkdir(Join(path, 'license'))
-    call writefile(['name : "illegal"'], Join(path, 'license', '__illegal__.toml'))
+    call writefile(['name : "error"'], Join(path, 'license', '__error__.toml'))
     call writefile(['name = "empty"'], Join(path, 'license', '__empty__.toml'))
   End
 
@@ -103,8 +100,8 @@ Describe #load
     Throws /^license not found:/ :call license#load('_')
   End
 
-  It throws an exception when the specified license has an illegal format
-    Throws /^illegal toml format at / :call license#load('__illegal__')
+  It throws an exception when the specified license is malformed
+    Throws /^illegal toml format at / :call license#load('__error__')
   End
 
   It throws an exception when the specified license is empty
@@ -112,7 +109,7 @@ Describe #load
   End
 End
 
-Describe #license
+Describe #license()
   Before each
     call setline(1, range(1, 4))
     call cursor(2, 1)
@@ -363,7 +360,7 @@ Describe #license
   End
 End
 
-Describe #name
+Describe #name()
   Before each
     let b:license_lines = 1
 

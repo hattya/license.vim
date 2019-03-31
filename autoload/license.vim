@@ -1,6 +1,6 @@
 " File:        autoload/license.vim
 " Author:      Akinori Hattori <hattya@gmail.com>
-" Last Change: 2016-05-23
+" Last Change: 2019-03-31
 " License:     MIT License
 
 let s:save_cpo = &cpo
@@ -36,7 +36,7 @@ function! license#license(name, line1, line2) abort
     let sw = s:getvar('license_shiftwidth', 1)
     let ind = repeat(' ', sw)
     let tw = s:getvar('license_textwidth', &textwidth)
-    let wrap = 0 < tw && lic.wrap
+    let wrap = tw > 0 && lic.wrap
     setlocal textwidth=0
     if line1 == 0
       normal! O
@@ -115,7 +115,7 @@ function! license#name(...) abort
 endfunction
 
 function! s:getvar(name, ...) abort
-  return get(b:, a:name, get(g:, a:name, 0 < a:0 ? a:1 : 0))
+  return get(b:, a:name, get(g:, a:name, a:0 > 0 ? a:1 : 0))
 endfunction
 
 function! s:error(msg) abort
