@@ -36,22 +36,22 @@ Vundle_
 
    Plugin 'hattya/license.vim'
 
-NeoBundle_
-
-.. code:: vim
-
-   NeoBundle 'hattya/license.vim'
-
 vim-plug_
 
 .. code:: vim
 
    Plug 'hattya/license.vim'
 
+dein.vim_
+
+.. code:: vim
+
+   call dein#add('hattya/license.vim')
+
 .. _pathogen.vim: https://github.com/tpope/vim-pathogen
 .. _Vundle: https://github.com/VundleVim/Vundle.vim
-.. _NeoBundle: https://github.com/Shougo/neobundle.vim
 .. _vim-plug: https://github.com/junegunn/vim-plug
+.. _dein.vim: https://github.com/Shougo/dein.vim
 
 
 Usage
