@@ -1,6 +1,6 @@
 " File:        autoload/license.vim
 " Author:      Akinori Hattori <hattya@gmail.com>
-" Last Change: 2019-03-31
+" Last Change: 2019-04-06
 " License:     MIT License
 
 let s:save_cpo = &cpo
@@ -40,7 +40,6 @@ function! license#license(name, line1, line2) abort
     setlocal textwidth=0
     if line1 == 0
       normal! O
-      normal! k
     endif
     for s in split(lic.text, '\n')
       normal! o
@@ -149,9 +148,9 @@ function! license#load(name) abort
   return extend(copy(s:license), lic)
 endfunction
 
-function! license#complete(arg, line, pos) abort
+function! license#complete(lead, line, pos) abort
   let list = []
-  for f in s:find(a:arg . (a:arg =~# '\*$' ? '' : '*'))
+  for f in s:find(a:lead . (a:lead =~# '\*$' ? '' : '*'))
     call add(list, fnamemodify(f, ':t:r'))
   endfor
   return sort(s:L.uniq_by(list, 'tolower(v:val)'))

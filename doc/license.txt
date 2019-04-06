@@ -2,7 +2,7 @@
 
 Author:      Akinori Hattori <hattya@gmail.com>
 Repository:  https://github.com/hattya/license.vim
-Last Change: 2016-10-30
+Last Change: 2019-04-06
 License:     MIT License
 
 CONTENTS					*license-contents*
@@ -17,8 +17,8 @@ Definition					|license-definition|
 ==============================================================================
 INTRODUCTION					*license-introduction*
 
-*license.vim* is a Vim plugin to insert a license to the buffer, or replace
-the specified range of the buffer by a license.
+*license.vim* is a Vim plugin to insert a license to the buffer, or replace the
+specified range of the buffer by a license.
 
 ==============================================================================
 USAGE						*license-usage*
@@ -41,8 +41,8 @@ If the buffer contains the following line:
 
 	License:
 
-|license.vim| asks a license name when writing the buffer. It can be changed
-by |g:license_keyword_pre| and |g:license_keyword_post|.
+|license.vim| asks a license name when writing the buffer. It can be changed by
+|g:license_keyword_pre| and |g:license_keyword_post|.
 
 ==============================================================================
 INTERFACE					*license-interface*
