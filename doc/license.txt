@@ -2,7 +2,7 @@
 
 Author:      Akinori Hattori <hattya@gmail.com>
 Repository:  https://github.com/hattya/license.vim
-Last Change: 2019-04-06
+Last Change: 2019-04-07
 License:     MIT License
 
 CONTENTS					*license-contents*
@@ -19,6 +19,9 @@ INTRODUCTION					*license-introduction*
 
 *license.vim* is a Vim plugin to insert a license to the buffer, or replace the
 specified range of the buffer by a license.
+
+|license.vim| can also insert an SPDX ID to the buffer.
+SPDX IDs: https://spdx.org/ids
 
 ==============================================================================
 USAGE						*license-usage*
@@ -43,6 +46,15 @@ If the buffer contains the following line:
 
 |license.vim| asks a license name when writing the buffer. It can be changed by
 |g:license_keyword_pre| and |g:license_keyword_post|.
+
+
+|license.vim| defines |:SPDXLicense| command, and it can use like:
+>
+	" Insert an SPDX ID to the current position.
+	SPDXLicense MIT
+
+	" Insert an SPDX ID to line 3.
+	3SPDXLicense MIT
 
 ==============================================================================
 INTERFACE					*license-interface*
@@ -74,11 +86,27 @@ b:license_lines					*b:license_lines*
 	The number of lines for searching the keyword in a buffer.
 	The default value is 10.
 
+g:spdx_license					*g:spdx_license*
+b:spdx_license					*b:spdx_license*
+	A |List| of following items to filter the SPDX License List.
+
+	"deprecated"
+		Include the deprecated license identifiers and exceptions.
+
+	"fsf"
+		Select the licenses that are considered free by the FSF.
+
+	"osi"
+		Select the OSI-approved licenses.
+
 ------------------------------------------------------------------------------
 COMMANDS					*license-commands*
 
 :[range]License {name}				*:License*
 	Insert a {name} license to the buffer.
+
+:[range]SPDXLicense {expr} ..			*:SPDXLicense*
+	Insert an SPDX ID to the buffer.
 
 ==============================================================================
 DEFINITION						*license-definition*

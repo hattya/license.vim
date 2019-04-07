@@ -4,6 +4,8 @@ license.vim
 license.vim is a Vim plugin to insert a license to the buffer, or replace the
 specified range of the buffer by a license.
 
+It can also insert an `SPDX ID`_ to the buffer.
+
 .. image:: https://semaphoreci.com/api/v1/hattya/license-vim/branches/master/badge.svg
    :target: https://semaphoreci.com/hattya/license-vim
 
@@ -18,6 +20,8 @@ specified range of the buffer by a license.
 
 .. image:: https://img.shields.io/badge/doc-:h%20license.txt-blue.svg
    :target: doc/license.txt
+
+.. _SPDX ID: https://spdx.org/ids
 
 
 Installation
@@ -60,6 +64,12 @@ Usage
 .. code:: vim
 
    License MIT
+
+or
+
+.. code:: vim
+
+   SPDXLicense MIT
 
 
 Testing

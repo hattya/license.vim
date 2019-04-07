@@ -1,0 +1,388 @@
+0BSD	osi
+AAL	osi
+ADSL
+AFL-1.1	fsf	osi
+AFL-1.2	fsf	osi
+AFL-2.0	fsf	osi
+AFL-2.1	fsf	osi
+AFL-3.0	fsf	osi
+AGPL-1.0	deprecated	fsf
+AGPL-1.0-only
+AGPL-1.0-or-later
+AGPL-3.0	deprecated	fsf	osi
+AGPL-3.0-only	fsf	osi
+AGPL-3.0-or-later	fsf	osi
+AMDPLPA
+AML
+AMPAS
+ANTLR-PD
+APAFML
+APL-1.0	osi
+APSL-1.0	osi
+APSL-1.1	osi
+APSL-1.2	osi
+APSL-2.0	fsf	osi
+Abstyles
+Adobe-2006
+Adobe-Glyph
+Afmparse
+Aladdin
+Apache-1.0	fsf
+Apache-1.1	fsf	osi
+Apache-2.0	fsf	osi
+Artistic-1.0	osi
+Artistic-1.0-Perl	osi
+Artistic-1.0-cl8	osi
+Artistic-2.0	fsf	osi
+BSD-1-Clause
+BSD-2-Clause	osi
+BSD-2-Clause-FreeBSD	fsf
+BSD-2-Clause-NetBSD
+BSD-2-Clause-Patent	osi
+BSD-3-Clause	fsf	osi
+BSD-3-Clause-Attribution
+BSD-3-Clause-Clear	fsf
+BSD-3-Clause-LBNL
+BSD-3-Clause-No-Nuclear-License
+BSD-3-Clause-No-Nuclear-License-2014
+BSD-3-Clause-No-Nuclear-Warranty
+BSD-4-Clause	fsf
+BSD-4-Clause-UC
+BSD-Protection
+BSD-Source-Code
+BSL-1.0	fsf	osi
+Bahyph
+Barr
+Beerware
+BitTorrent-1.0
+BitTorrent-1.1	fsf
+Borceux
+CATOSL-1.1	osi
+CC-BY-1.0
+CC-BY-2.0
+CC-BY-2.5
+CC-BY-3.0
+CC-BY-4.0	fsf
+CC-BY-NC-1.0
+CC-BY-NC-2.0
+CC-BY-NC-2.5
+CC-BY-NC-3.0
+CC-BY-NC-4.0
+CC-BY-NC-ND-1.0
+CC-BY-NC-ND-2.0
+CC-BY-NC-ND-2.5
+CC-BY-NC-ND-3.0
+CC-BY-NC-ND-4.0
+CC-BY-NC-SA-1.0
+CC-BY-NC-SA-2.0
+CC-BY-NC-SA-2.5
+CC-BY-NC-SA-3.0
+CC-BY-NC-SA-4.0
+CC-BY-ND-1.0
+CC-BY-ND-2.0
+CC-BY-ND-2.5
+CC-BY-ND-3.0
+CC-BY-ND-4.0
+CC-BY-SA-1.0
+CC-BY-SA-2.0
+CC-BY-SA-2.5
+CC-BY-SA-3.0
+CC-BY-SA-4.0	fsf
+CC0-1.0	fsf
+CDDL-1.0	fsf	osi
+CDDL-1.1
+CDLA-Permissive-1.0
+CDLA-Sharing-1.0
+CECILL-1.0
+CECILL-1.1
+CECILL-2.0	fsf
+CECILL-2.1	osi
+CECILL-B	fsf
+CECILL-C	fsf
+CERN-OHL-1.1
+CERN-OHL-1.2
+CNRI-Jython
+CNRI-Python	osi
+CNRI-Python-GPL-Compatible
+CPAL-1.0	fsf	osi
+CPL-1.0	fsf	osi
+CPOL-1.02
+CUA-OPL-1.0	osi
+Caldera
+ClArtistic	fsf
+Condor-1.1	fsf
+Crossword
+CrystalStacker
+Cube
+D-FSL-1.0
+DOC
+DSDP
+Dotseqn
+ECL-1.0	osi
+ECL-2.0	fsf	osi
+EFL-1.0	osi
+EFL-2.0	fsf	osi
+EPL-1.0	fsf	osi
+EPL-2.0	fsf	osi
+EUDatagrid	fsf	osi
+EUPL-1.0
+EUPL-1.1	fsf	osi
+EUPL-1.2	fsf	osi
+Entessa	osi
+ErlPL-1.1
+Eurosym
+FSFAP	fsf
+FSFUL
+FSFULLR
+FTL	fsf
+Fair	osi
+Frameworx-1.0	osi
+FreeImage
+GFDL-1.1	deprecated	fsf
+GFDL-1.1-only	fsf
+GFDL-1.1-or-later	fsf
+GFDL-1.2	deprecated	fsf
+GFDL-1.2-only	fsf
+GFDL-1.2-or-later	fsf
+GFDL-1.3	deprecated	fsf
+GFDL-1.3-only	fsf
+GFDL-1.3-or-later	fsf
+GL2PS
+GPL-1.0	deprecated
+GPL-1.0+	deprecated
+GPL-1.0-only
+GPL-1.0-or-later
+GPL-2.0	deprecated	fsf	osi
+GPL-2.0+	deprecated	fsf	osi
+GPL-2.0-only	fsf	osi
+GPL-2.0-or-later	fsf	osi
+GPL-2.0-with-GCC-exception	deprecated
+GPL-2.0-with-autoconf-exception	deprecated
+GPL-2.0-with-bison-exception	deprecated
+GPL-2.0-with-classpath-exception	deprecated
+GPL-2.0-with-font-exception	deprecated
+GPL-3.0	deprecated	fsf	osi
+GPL-3.0+	deprecated	fsf	osi
+GPL-3.0-only	fsf	osi
+GPL-3.0-or-later	fsf	osi
+GPL-3.0-with-GCC-exception	deprecated	osi
+GPL-3.0-with-autoconf-exception	deprecated
+Giftware
+Glide
+Glulxe
+HPND	fsf	osi
+HPND-sell-variant
+HaskellReport
+IBM-pibs
+ICU
+IJG	fsf
+IPA	fsf	osi
+IPL-1.0	fsf	osi
+ISC	fsf	osi
+ImageMagick
+Imlib2	fsf
+Info-ZIP
+Intel	fsf	osi
+Intel-ACPI
+Interbase-1.0
+JPNIC
+JSON
+JasPer-2.0
+LAL-1.2
+LAL-1.3
+LGPL-2.0	deprecated	osi
+LGPL-2.0+	deprecated	osi
+LGPL-2.0-only	osi
+LGPL-2.0-or-later	osi
+LGPL-2.1	deprecated	fsf	osi
+LGPL-2.1+	deprecated	fsf	osi
+LGPL-2.1-only	fsf	osi
+LGPL-2.1-or-later	fsf	osi
+LGPL-3.0	deprecated	fsf	osi
+LGPL-3.0+	deprecated	fsf	osi
+LGPL-3.0-only	fsf	osi
+LGPL-3.0-or-later	fsf	osi
+LGPLLR
+LPL-1.0	osi
+LPL-1.02	fsf	osi
+LPPL-1.0
+LPPL-1.1
+LPPL-1.2	fsf
+LPPL-1.3a	fsf
+LPPL-1.3c	osi
+Latex2e
+Leptonica
+LiLiQ-P-1.1	osi
+LiLiQ-R-1.1	osi
+LiLiQ-Rplus-1.1	osi
+Libpng
+Linux-OpenIB
+MIT	fsf	osi
+MIT-0	osi
+MIT-CMU
+MIT-advertising
+MIT-enna
+MIT-feh
+MITNFA
+MPL-1.0	osi
+MPL-1.1	fsf	osi
+MPL-2.0	fsf	osi
+MPL-2.0-no-copyleft-exception	osi
+MS-PL	fsf	osi
+MS-RL	fsf	osi
+MTLL
+MakeIndex
+MirOS	osi
+Motosoto	osi
+Multics	osi
+Mup
+NASA-1.3	osi
+NBPL-1.0
+NCSA	fsf	osi
+NGPL	osi
+NLOD-1.0
+NLPL
+NOSL	fsf
+NPL-1.0	fsf
+NPL-1.1	fsf
+NPOSL-3.0	osi
+NRL
+NTP	osi
+Naumen	osi
+Net-SNMP
+NetCDF
+Newsletr
+Nokia	fsf	osi
+Noweb
+Nunit	deprecated	fsf
+OCCT-PL
+OCLC-2.0	osi
+ODC-By-1.0
+ODbL-1.0	fsf
+OFL-1.0	fsf
+OFL-1.1	fsf	osi
+OGL-UK-1.0
+OGL-UK-2.0
+OGL-UK-3.0
+OGTSL	osi
+OLDAP-1.1
+OLDAP-1.2
+OLDAP-1.3
+OLDAP-1.4
+OLDAP-2.0
+OLDAP-2.0.1
+OLDAP-2.1
+OLDAP-2.2
+OLDAP-2.2.1
+OLDAP-2.2.2
+OLDAP-2.3	fsf
+OLDAP-2.4
+OLDAP-2.5
+OLDAP-2.6
+OLDAP-2.7	fsf
+OLDAP-2.8
+OML
+OPL-1.0
+OSET-PL-2.1	osi
+OSL-1.0	fsf	osi
+OSL-1.1	fsf
+OSL-2.0	fsf	osi
+OSL-2.1	fsf	osi
+OSL-3.0	fsf	osi
+OpenSSL	fsf
+PDDL-1.0
+PHP-3.0	osi
+PHP-3.01	fsf
+Plexus
+PostgreSQL	osi
+Python-2.0	fsf	osi
+QPL-1.0	fsf	osi
+Qhull
+RHeCos-1.1
+RPL-1.1	osi
+RPL-1.5	osi
+RPSL-1.0	fsf	osi
+RSA-MD
+RSCPL	osi
+Rdisc
+Ruby	fsf
+SAX-PD
+SCEA
+SGI-B-1.0
+SGI-B-1.1
+SGI-B-2.0	fsf
+SISSL	fsf	osi
+SISSL-1.2
+SMLNJ	fsf
+SMPPL
+SNIA
+SPL-1.0	fsf	osi
+SWL
+Saxpath
+Sendmail
+Sendmail-8.23
+SimPL-2.0	osi
+Sleepycat	fsf	osi
+Spencer-86
+Spencer-94
+Spencer-99
+StandardML-NJ	deprecated	fsf
+SugarCRM-1.1.3
+TAPR-OHL-1.0
+TCL
+TCP-wrappers
+TMate
+TORQUE-1.1
+TOSL
+TU-Berlin-1.0
+TU-Berlin-2.0
+UPL-1.0	fsf	osi
+Unicode-DFS-2015
+Unicode-DFS-2016
+Unicode-TOU
+Unlicense	fsf
+VOSTROM
+VSL-1.0	osi
+Vim	fsf
+W3C	fsf	osi
+W3C-19980720
+W3C-20150513
+WTFPL	fsf
+Watcom-1.0	osi
+Wsuipa
+X11	fsf
+XFree86-1.1	fsf
+XSkat
+Xerox
+Xnet	osi
+YPL-1.0
+YPL-1.1	fsf
+ZPL-1.1
+ZPL-2.0	fsf	osi
+ZPL-2.1	fsf
+Zed
+Zend-2.0	fsf
+Zimbra-1.3	fsf
+Zimbra-1.4
+Zlib	fsf	osi
+bzip2-1.0.5
+bzip2-1.0.6
+copyleft-next-0.3.0
+copyleft-next-0.3.1
+curl
+diffmark
+dvipdfm
+eCos-2.0	deprecated	fsf
+eGenix
+gSOAP-1.3b
+gnuplot	fsf
+iMatix	fsf
+libpng-2.0
+libtiff
+mpich2
+psfrag
+psutils
+wxWindows	deprecated
+xinetd	fsf
+xpp
+zlib-acknowledgement

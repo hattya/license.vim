@@ -1,6 +1,6 @@
 " File:        autoload/license.vim
 " Author:      Akinori Hattori <hattya@gmail.com>
-" Last Change: 2019-04-06
+" Last Change: 2019-04-07
 " License:     MIT License
 
 let s:save_cpo = &cpo
@@ -33,9 +33,9 @@ function! license#license(name, line1, line2) abort
     setlocal formatoptions+=tco
     call cursor(max([line1, 1]), 1)
     " insert
-    let sw = s:getvar('license_shiftwidth', 1)
+    let sw = license#shiftwidth()
     let ind = repeat(' ', sw)
-    let tw = s:getvar('license_textwidth', &textwidth)
+    let tw = license#getvar('license_textwidth', &textwidth)
     let wrap = tw > 0 && lic.wrap
     setlocal textwidth=0
     if line1 == 0
@@ -79,10 +79,10 @@ function! license#name(...) abort
 
   let pos = getpos('.')
   try
-    let pre = s:getvar('license_keyword_pre', '\cLicense:')
-    let post = s:getvar('license_keyword_post', '$')
+    let pre = license#getvar('license_keyword_pre', '\cLicense:')
+    let post = license#getvar('license_keyword_post', '$')
     let pat = pre .'\s*\zs\ze' . post
-    let lines = s:getvar('license_lines', 10)
+    let lines = license#getvar('license_lines', 10)
     let lic = {}
     for lnum in [1, max([last - lines, lines]) + 1]
       let stopline = min([lnum + lines - 1, last])
@@ -113,7 +113,11 @@ function! license#name(...) abort
   endtry
 endfunction
 
-function! s:getvar(name, ...) abort
+function! license#shiftwidth() abort
+  return license#getvar('license_shiftwidth', 1)
+endfunction
+
+function! license#getvar(name, ...) abort
   return get(b:, a:name, get(g:, a:name, a:0 > 0 ? a:1 : 0))
 endfunction
 
