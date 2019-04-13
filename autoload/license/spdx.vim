@@ -1,6 +1,6 @@
 " File:        autoload/license/spdx.vim
 " Author:      Akinori Hattori <hattya@gmail.com>
-" Last Change: 2019-04-07
+" Last Change: 2019-04-13
 " License:     MIT License
 
 let s:save_cpo = &cpo
@@ -50,7 +50,7 @@ function! s:is_with(list, i) abort
 endfunction
 
 function! s:load(name) abort
-  let list = map(readfile(s:V.globpath(&runtimepath, 'license/' . a:name)[0]), 'split(v:val)')
+  let list = map(readfile(s:V.globpath(&runtimepath, 'license/' . a:name)[-1]), 'split(v:val)')
 
   let spdx = license#getvar('spdx_license', [])
   let expr = []

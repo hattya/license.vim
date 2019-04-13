@@ -1,6 +1,6 @@
 " File:        autoload/license.vim
 " Author:      Akinori Hattori <hattya@gmail.com>
-" Last Change: 2019-04-07
+" Last Change: 2019-04-13
 " License:     MIT License
 
 let s:save_cpo = &cpo
@@ -142,7 +142,7 @@ function! license#load(name) abort
     throw 'license not found: ' . name
   endif
   try
-    let lic = get(s:TOML.parse_file(files[0]), 'license', {})
+    let lic = get(s:TOML.parse_file(files[-1]), 'license', {})
   catch
     throw substitute(v:exception, '\v^%(\S+:\s+){2}(\u)', '\l\1', '')
   endtry
