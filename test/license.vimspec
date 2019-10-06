@@ -222,23 +222,8 @@ Describe #license()
     Assert Equals(getline(7), '4')
   End
 
-  It replaces the specified range ($,$+1) by a license
-    $,$+1 License MIT
-    Assert Equals(line('.'), 2)
-    Assert Equals(line('$'), 8)
-
-    Assert Equals(getline(1), '1')
-    Assert Equals(getline(2), '2')
-    Assert Equals(getline(3), '3')
-    Assert  Match(getline(4), '^\S')
-    Assert Equals(getline(5), '')
-    Assert  Match(getline(6), '^\S')
-    Assert Equals(getline(7), '')
-    Assert  Match(getline(8), '^\S')
-  End
-
-  It replaces the specified range ($-1,$+1) by a license
-    $-1,$+1 License MIT
+  It replaces the specified range ($-1,$) by a license
+    $-1,$ License MIT
     Assert Equals(line('.'), 2)
     Assert Equals(line('$'), 7)
 
