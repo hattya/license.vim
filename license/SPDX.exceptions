@@ -7,6 +7,7 @@ gnu-javamail-exception
 OpenJDK-assembly-exception-1.0
 Bison-exception-2.2
 i2p-gpl-java-exception
+Universal-FOSS-exception-1.0
 Qt-LGPL-exception-1.1
 389-exception
 Classpath-exception-2.0
@@ -23,6 +24,7 @@ Nokia-Qt-exception-1.1	deprecated
 LLVM-exception
 WxWindows-exception-3.1
 DigiRule-FOSS-exception
+Swift-exception
 GCC-exception-3.1
 eCos-exception-2.0
 Autoconf-exception-2.0
