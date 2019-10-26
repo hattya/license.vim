@@ -8,6 +8,7 @@
 #
 
 import json
+import operator
 import os
 try:
     from urllib.request import urlopen
@@ -21,7 +22,7 @@ def main():
         os.makedirs(datadir)
     # licenses
     with open(os.path.join(datadir, 'SPDX.licenses'), 'w') as fp:
-        for v in load('licenses.json'):
+        for v in load('licenses.json', 'licenseId'):
             fp.write(v['licenseId'])
             if v.get('isDeprecatedLicenseId'):
                 fp.write('\tdeprecated')
@@ -32,17 +33,17 @@ def main():
             fp.write('\n')
     # exceptions
     with open(os.path.join(datadir, 'SPDX.exceptions'), 'w') as fp:
-        for v in load('exceptions.json'):
+        for v in load('exceptions.json', 'licenseExceptionId'):
             fp.write(v['licenseExceptionId'])
             if v.get('isDeprecatedLicenseId'):
                 fp.write('\tdeprecated')
             fp.write('\n')
 
 
-def load(name):
+def load(name, key):
     resp = urlopen('https://spdx.org/licenses/{}'.format(name))
     if resp.getcode() == 200:
-        for v in json.load(resp)[os.path.splitext(name)[0]]:
+        for v in sorted(json.load(resp)[os.path.splitext(name)[0]], key=operator.itemgetter(key)):
             yield v
 
 
