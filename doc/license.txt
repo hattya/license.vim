@@ -2,7 +2,7 @@
 
 Author:      Akinori Hattori <hattya@gmail.com>
 Repository:  https://github.com/hattya/license.vim
-Last Change: 2019-04-07
+Last Change: 2019-12-23
 License:     MIT License
 
 CONTENTS					*license-contents*
@@ -104,6 +104,9 @@ COMMANDS					*license-commands*
 
 :[range]License {name}				*:License*
 	Insert a {name} license to the buffer.
+
+:[range]License! {name}				*:License!*
+	Insert a {name} license to the buffer, respecting only 'textwidth'.
 
 :[range]SPDXLicense {expr} ..			*:SPDXLicense*
 	Insert an SPDX ID to the buffer.

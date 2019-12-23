@@ -17,7 +17,7 @@ let s:license = {
 \  'wrap': 1,
 \}
 
-function! license#license(line1, line2, name) abort
+function! license#license(line1, line2, bang, name) abort
   try
     let lic = license#load(a:name)
   catch
@@ -33,11 +33,22 @@ function! license#license(line1, line2, name) abort
     setlocal formatoptions+=tco
     call cursor(max([line1, 1]), 1)
     " insert
-    let sw = license#shiftwidth()
-    let ind = repeat(' ', sw)
-    let tw = license#getvar('license_textwidth', &textwidth)
-    let wrap = tw > 0 && lic.wrap
-    setlocal textwidth=0
+    if a:bang
+      execute "normal! o_\<BS>"
+      let ind = matchstr(getline('.'), '\s\+$')
+      silent delete _
+      normal! k
+      let wrap = 0
+      if !lic.wrap
+        setlocal textwidth=0
+      endif
+    else
+      let sw = license#shiftwidth()
+      let ind = repeat(' ', sw)
+      let tw = license#getvar('license_textwidth', &textwidth)
+      let wrap = tw > 0 && lic.wrap
+      setlocal textwidth=0
+    endif
     if line1 == 0
       normal! O
     endif

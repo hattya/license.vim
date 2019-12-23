@@ -11,8 +11,8 @@ let g:loaded_license = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
-command! -nargs=1 -complete=customlist,license#complete      -range=0 License     call license#license(<line1>, <line2>, <q-args>)
-command! -nargs=1 -complete=customlist,license#spdx#complete -range=0 SPDXLicense call license#spdx#license(<line1>, <line2>, <q-args>)
+command! -nargs=1 -complete=customlist,license#complete      -range=0 -bang License     call license#license(<line1>, <line2>, <bang>0, <q-args>)
+command! -nargs=1 -complete=customlist,license#spdx#complete -range=0       SPDXLicense call license#spdx#license(<line1>, <line2>, <q-args>)
 
 augroup license
   autocmd!
