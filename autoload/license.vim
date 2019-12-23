@@ -1,6 +1,6 @@
 " File:        autoload/license.vim
 " Author:      Akinori Hattori <hattya@gmail.com>
-" Last Change: 2019-04-13
+" Last Change: 2019-12-23
 " License:     MIT License
 
 let s:save_cpo = &cpo
@@ -17,7 +17,7 @@ let s:license = {
 \  'wrap': 1,
 \}
 
-function! license#license(name, line1, line2) abort
+function! license#license(line1, line2, name) abort
   try
     let lic = license#load(a:name)
   catch
@@ -41,12 +41,12 @@ function! license#license(name, line1, line2) abort
     if line1 == 0
       normal! O
     endif
-    for s in split(lic.text, '\n')
+    for s in split(lic.text, '\r\=\n')
       normal! o
       if s =~# '^\s*$'
         continue
       endif
-      let l = substitute(getline('.'), '\s\+$', '', '')
+      let l = getline('.')
       if wrap
         let &l:textwidth = (l !=# '' ? len(l) + sw : 0) + tw
       endif

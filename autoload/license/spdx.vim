@@ -1,6 +1,6 @@
 " File:        autoload/license/spdx.vim
 " Author:      Akinori Hattori <hattya@gmail.com>
-" Last Change: 2019-04-13
+" Last Change: 2019-12-23
 " License:     MIT License
 
 let s:save_cpo = &cpo
@@ -12,7 +12,7 @@ let s:G = vital#license#import('Vim.Guard')
 let s:ops = ['AND', 'OR', 'WITH']
 let s:list = ['SPDX.licenses', 'SPDX.exceptions']
 
-function! license#spdx#license(expr, line1, line2) abort
+function! license#spdx#license(line1, line2, expr) abort
   let line = max([a:line1, a:line2, 0])
 
   let g = s:G.store(['&l:formatoptions'])

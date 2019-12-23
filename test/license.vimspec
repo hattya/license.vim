@@ -241,7 +241,7 @@ Describe #license()
     call setline(1, repeat([''], line('$')))
 
     License MIT
-    Assert Equals(line('.'), 2)
+    Assert Equals(line('.'),  2)
     Assert Equals(line('$'), 21)
 
     Assert Equals(getline(1),  '')
@@ -275,7 +275,7 @@ Describe #license()
     call setline('$', ' */')
 
     License MIT
-    Assert Equals(line('.'), 2)
+    Assert Equals(line('.'),  2)
     Assert Equals(line('$'), 21)
 
     Assert Equals(getline(1),  '/*')
@@ -307,7 +307,7 @@ Describe #license()
     call setline(1, repeat(['#'], line('$')))
 
     License MIT
-    Assert Equals(line('.'), 2)
+    Assert Equals(line('.'),  2)
     Assert Equals(line('$'), 21)
 
     Assert Equals(getline(1),  '#')
