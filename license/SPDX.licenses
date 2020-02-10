@@ -221,7 +221,7 @@ LiLiQ-Rplus-1.1	osi
 Libpng
 Linux-OpenIB
 MIT	fsf	osi
-MIT-0	osi
+MIT-0
 MIT-CMU
 MIT-advertising
 MIT-enna
@@ -252,6 +252,7 @@ NPL-1.1	fsf
 NPOSL-3.0	osi
 NRL
 NTP	osi
+NTP-0
 Naumen	osi
 Net-SNMP
 NetCDF
@@ -264,7 +265,11 @@ OCLC-2.0	osi
 ODC-By-1.0
 ODbL-1.0	fsf
 OFL-1.0	fsf
+OFL-1.0-RFN
+OFL-1.0-no-RFN
 OFL-1.1	fsf	osi
+OFL-1.1-RFN	osi
+OFL-1.1-no-RFN	osi
 OGL-Canada-2.0
 OGL-UK-1.0
 OGL-UK-2.0
@@ -298,6 +303,7 @@ OpenSSL	fsf
 PDDL-1.0
 PHP-3.0	osi
 PHP-3.01	fsf
+PSF-2.0
 Parity-6.0.0
 Plexus
 PostgreSQL	osi
@@ -392,6 +398,7 @@ gSOAP-1.3b
 gnuplot	fsf
 iMatix	fsf
 libpng-2.0
+libselinux-1.0
 libtiff
 mpich2
 psfrag

@@ -1,8 +1,8 @@
 Describe spdx
   Describe #complete()
     Before all
-      let nlic = 374
-      let nexc = 35
+      let nlic = 381
+      let nexc = 37
     End
 
     After each
@@ -26,7 +26,7 @@ Describe spdx
     End
 
     It lists only OSI-approved license identifiers
-      let n = 111
+      let n = 112
       let b:spdx_license = ['osi']
       Assert LengthOf(license#spdx#complete('', 'License ', 8), n)
 
