@@ -101,7 +101,7 @@ Describe #load()
   End
 
   It throws an exception when the specified license is malformed
-    Throws /^illegal toml format at / :call license#load('__error__')
+    Throws /^illegal / :call license#load('__error__')
   End
 
   It throws an exception when the specified license is empty
@@ -469,10 +469,6 @@ Describe #name()
   End
 
   It inserts a license name to the buffer on write
-    if !has('patch-7.4.1150')
-      Skip requires patch 7.4.1150
-    endif
-
     global /^$/ delete _
 
     call feedkeys(":call license#name()\<CR>MIT\<CR>", 'tx')
@@ -483,10 +479,6 @@ Describe #name()
   End
 
   It does not change the buffer when there is no input on write
-    if !has('patch-7.4.1150')
-      Skip requires patch 7.4.1150
-    endif
-
     global /^$/ delete _
 
     call feedkeys(":call license#name()\<CR>\<CR>", 'tx')
