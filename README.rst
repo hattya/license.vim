@@ -27,13 +27,6 @@ It can also insert an `SPDX ID`_ to the buffer.
 Installation
 ------------
 
-pathogen.vim_
-
-.. code:: console
-
-   $ cd ~/.vim/bundle
-   $ git clone https://github.com/hattya/license.vim
-
 Vundle_
 
 .. code:: vim
@@ -52,10 +45,15 @@ dein.vim_
 
    call dein#add('hattya/license.vim')
 
-.. _pathogen.vim: https://github.com/tpope/vim-pathogen
 .. _Vundle: https://github.com/VundleVim/Vundle.vim
 .. _vim-plug: https://github.com/junegunn/vim-plug
 .. _dein.vim: https://github.com/Shougo/dein.vim
+
+
+Requirements
+------------
+
+- Vim 8.0+
 
 
 Usage
