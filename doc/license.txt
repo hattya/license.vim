@@ -2,7 +2,7 @@
 
 Author:      Akinori Hattori <hattya@gmail.com>
 Repository:  https://github.com/hattya/license.vim
-Last Change: 2019-12-23
+Last Change: 2020-08-30
 License:     MIT License
 
 CONTENTS					*license-contents*
@@ -12,7 +12,7 @@ Usage						|license-usage|
 Interface					|license-interface|
   Variables					|license-variables|
   Commands					|license-commands|
-Definition					|license-definition|
+Definitions					|license-definitions|
 
 ==============================================================================
 INTRODUCTION					*license-introduction*
@@ -112,7 +112,7 @@ COMMANDS					*license-commands*
 	Insert an SPDX ID to the buffer.
 
 ==============================================================================
-DEFINITION						*license-definition*
+DEFINITIONS					*license-definitions*
 
 The license definitions are located in license/*.toml, and are loaded from
 'runtimepath'.
