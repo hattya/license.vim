@@ -1,6 +1,6 @@
 " File:        autoload/license/spdx.vim
 " Author:      Akinori Hattori <hattya@gmail.com>
-" Last Change: 2019-12-23
+" Last Change: 2020-10-08
 " License:     MIT License
 
 let s:save_cpo = &cpo
@@ -41,8 +41,8 @@ function! license#spdx#complete(lead, line, pos) abort
     let args = s:split(pfx)
   endif
 
-  let list = len(args) % 2 != 0 ? copy(s:ops)[: s:is_with(args, -2) ? -2 : -1] : s:load(s:list[s:is_with(args, -1) ? 1 : 0])
-  return map(filter(list, 'v:val =~? "^' . lead . '"'), 'pfx . v:val')
+  let list = len(args) % 2 != 0 ? copy(s:ops)[: s:is_with(args, -2) ? -2 : -1] : s:load(s:list[s:is_with(args, -1)])
+  return map(filter(list, "v:val =~? '^" . lead . "'"), 'pfx . v:val')
 endfunction
 
 function! s:is_with(list, i) abort

@@ -97,15 +97,15 @@ Describe #load()
   End
 
   It throws an exception when the specified license is not found
-    Throws /^license not found:/ :call license#load('_')
+    Throws /^license not found:/ license#load('_')
   End
 
   It throws an exception when the specified license is malformed
-    Throws /^illegal / :call license#load('__error__')
+    Throws /^illegal / license#load('__error__')
   End
 
   It throws an exception when the specified license is empty
-    Throws /^empty license:/ :call license#load('__empty__')
+    Throws /^empty license:/ license#load('__empty__')
   End
 End
 
@@ -335,10 +335,7 @@ Describe #license()
 
   It shows an error when the specified license is not found
     License _
-    redir => out
-      messages
-    redir END
-    Assert Equals(split(out, '\n')[-1], 'license: license not found: _')
+    Assert Equals(split(execute('messages'), '\n')[-1], 'license: license not found: _')
   End
 
   It automatically wraps a license, respecting only the 'textwidth'
@@ -462,10 +459,7 @@ Describe #name()
     global /^$/ delete _
 
     call license#name('_')
-    redir => out
-      messages
-    redir END
-    Assert Equals(split(out, '\n')[-1], 'license: license not found: _')
+    Assert Equals(split(execute('messages'), '\n')[-1], 'license: license not found: _')
   End
 
   It inserts a license name to the buffer on write

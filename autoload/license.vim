@@ -1,6 +1,6 @@
 " File:        autoload/license.vim
 " Author:      Akinori Hattori <hattya@gmail.com>
-" Last Change: 2019-12-23
+" Last Change: 2020-10-08
 " License:     MIT License
 
 let s:save_cpo = &cpo
@@ -129,7 +129,7 @@ function! license#shiftwidth() abort
 endfunction
 
 function! license#getvar(name, ...) abort
-  return get(b:, a:name, get(g:, a:name, a:0 > 0 ? a:1 : 0))
+  return get(b:, a:name, get(g:, a:name, a:0 ? a:1 : 0))
 endfunction
 
 function! s:error(msg) abort
@@ -172,8 +172,7 @@ function! license#complete(lead, line, pos) abort
 endfunction
 
 function! s:find(name) abort
-  let n = substitute(a:name, '\v(\a)', '[\u\1\l\1]', 'g')
-  return s:V.globpath(&runtimepath, 'license/' . n . '.toml')
+  return s:V.globpath(&runtimepath, 'license/' . substitute(a:name, '\v(\a)', '[\u\1\l\1]', 'g') . '.toml')
 endfunction
 
 function! s:trim(s) abort
