@@ -16,6 +16,7 @@ AMDPLPA
 AML
 AMPAS
 ANTLR-PD
+ANTLR-PD-fallback
 APAFML
 APL-1.0	osi
 APSL-1.0	osi
@@ -53,6 +54,7 @@ BSD-4-Clause-UC
 BSD-Protection
 BSD-Source-Code
 BSL-1.0	fsf	osi
+BUSL-1.1
 Bahyph
 Barr
 Beerware
@@ -68,6 +70,7 @@ CC-BY-2.0
 CC-BY-2.5
 CC-BY-3.0
 CC-BY-3.0-AT
+CC-BY-3.0-US
 CC-BY-4.0	fsf
 CC-BY-NC-1.0
 CC-BY-NC-2.0
@@ -92,6 +95,7 @@ CC-BY-ND-3.0
 CC-BY-ND-4.0
 CC-BY-SA-1.0
 CC-BY-SA-2.0
+CC-BY-SA-2.0-UK
 CC-BY-SA-2.5
 CC-BY-SA-3.0
 CC-BY-SA-3.0-AT
@@ -198,6 +202,7 @@ Glide
 Glulxe
 HPND	fsf	osi
 HPND-sell-variant
+HTMLTIDY
 HaskellReport
 Hippocratic-2.1
 IBM-pibs
@@ -245,11 +250,12 @@ LiLiQ-Rplus-1.1	osi
 Libpng
 Linux-OpenIB
 MIT	fsf	osi
-MIT-0
+MIT-0	osi
 MIT-CMU
 MIT-advertising
 MIT-enna
 MIT-feh
+MIT-open-group
 MITNFA
 MPL-1.0	osi
 MPL-1.1	fsf	osi
@@ -320,7 +326,7 @@ OLDAP-2.4
 OLDAP-2.5
 OLDAP-2.6
 OLDAP-2.7	fsf
-OLDAP-2.8
+OLDAP-2.8	osi
 OML
 OPL-1.0
 OSET-PL-2.1	osi
@@ -389,7 +395,7 @@ TU-Berlin-2.0
 UCL-1.0	osi
 UPL-1.0	fsf	osi
 Unicode-DFS-2015
-Unicode-DFS-2016
+Unicode-DFS-2016	osi
 Unicode-TOU
 Unlicense	fsf	osi
 VOSTROM
