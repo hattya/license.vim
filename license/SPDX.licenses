@@ -45,11 +45,13 @@ BSD-3-Clause	fsf	osi
 BSD-3-Clause-Attribution
 BSD-3-Clause-Clear	fsf
 BSD-3-Clause-LBNL	osi
+BSD-3-Clause-Modification
 BSD-3-Clause-No-Nuclear-License
 BSD-3-Clause-No-Nuclear-License-2014
 BSD-3-Clause-No-Nuclear-Warranty
 BSD-3-Clause-Open-MPI
 BSD-4-Clause	fsf
+BSD-4-Clause-Shortened
 BSD-4-Clause-UC
 BSD-Protection
 BSD-Source-Code
@@ -62,6 +64,7 @@ BitTorrent-1.0
 BitTorrent-1.1	fsf
 BlueOak-1.0.0
 Borceux
+C-UDA-1.0
 CAL-1.0	osi
 CAL-1.0-Combined-Work-Exception	osi
 CATOSL-1.1	osi
@@ -96,6 +99,7 @@ CC-BY-ND-4.0
 CC-BY-SA-1.0
 CC-BY-SA-2.0
 CC-BY-SA-2.0-UK
+CC-BY-SA-2.1-JP
 CC-BY-SA-2.5
 CC-BY-SA-3.0
 CC-BY-SA-3.0-AT
@@ -114,9 +118,9 @@ CECILL-B	fsf
 CECILL-C	fsf
 CERN-OHL-1.1
 CERN-OHL-1.2
-CERN-OHL-P-2.0
-CERN-OHL-S-2.0
-CERN-OHL-W-2.0
+CERN-OHL-P-2.0	osi
+CERN-OHL-S-2.0	osi
+CERN-OHL-W-2.0	osi
 CNRI-Jython
 CNRI-Python	osi
 CNRI-Python-GPL-Compatible
@@ -132,6 +136,7 @@ CrystalStacker
 Cube
 D-FSL-1.0
 DOC
+DRL-1.0
 DSDP
 Dotseqn
 ECL-1.0	osi
@@ -154,7 +159,9 @@ FSFULLR
 FTL	fsf
 Fair	osi
 Frameworx-1.0	osi
+FreeBSD-DOC
 FreeImage
+GD
 GFDL-1.1	deprecated	fsf
 GFDL-1.1-invariants-only
 GFDL-1.1-invariants-or-later
@@ -252,6 +259,7 @@ Linux-OpenIB
 MIT	fsf	osi
 MIT-0	osi
 MIT-CMU
+MIT-Modern-Variant	osi
 MIT-advertising
 MIT-enna
 MIT-feh
@@ -271,6 +279,7 @@ MulanPSL-1.0
 MulanPSL-2.0	osi
 Multics	osi
 Mup
+NAIST-2003
 NASA-1.3	osi
 NBPL-1.0
 NCGL-UK-2.0
@@ -306,6 +315,7 @@ OFL-1.1	fsf	osi
 OFL-1.1-RFN	osi
 OFL-1.1-no-RFN	osi
 OGC-1.0
+OGDL-Taiwan-1.0
 OGL-Canada-2.0
 OGL-UK-1.0
 OGL-UK-2.0
