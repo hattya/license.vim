@@ -50,7 +50,7 @@ jobs:
       - name: Install covimerage
         run: |
           python -m pip install -U pip setuptools wheel
-          pip install -U covimerage
+          pip install -U 'click<8' covimerage
       - name: Test
         env:
           THEMIS_VIM: ${{ steps.vim.outputs.executable }}
