@@ -138,12 +138,14 @@ CERN-OHL-W-2.0	osi
 CNRI-Jython
 CNRI-Python	osi
 CNRI-Python-GPL-Compatible
+COIL-1.0
 CPAL-1.0	fsf	osi
 CPL-1.0	fsf	osi
 CPOL-1.02
 CUA-OPL-1.0	osi
 Caldera
 ClArtistic	fsf
+Community-Spec-1.0
 Condor-1.1	fsf
 Crossword
 CrystalStacker
@@ -167,6 +169,7 @@ EUPL-1.2	fsf	osi
 Entessa	osi
 ErlPL-1.1
 Eurosym
+FDK-AAC
 FSFAP	fsf
 FSFUL
 FSFULLR
@@ -270,6 +273,7 @@ LiLiQ-R-1.1	osi
 LiLiQ-Rplus-1.1	osi
 Libpng
 Linux-OpenIB
+Linux-man-pages-copyleft
 MIT	fsf	osi
 MIT-0	osi
 MIT-CMU
@@ -468,7 +472,7 @@ libtiff
 mpich2
 psfrag
 psutils
-wxWindows	deprecated
+wxWindows	deprecated	osi
 xinetd	fsf
 xpp
 zlib-acknowledgement
