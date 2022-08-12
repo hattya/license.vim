@@ -80,6 +80,7 @@ CC-BY-2.5-AU
 CC-BY-3.0
 CC-BY-3.0-AT
 CC-BY-3.0-DE
+CC-BY-3.0-IGO
 CC-BY-3.0-NL
 CC-BY-3.0-US
 CC-BY-4.0	fsf
@@ -251,7 +252,6 @@ JPNIC
 JSON
 Jam	osi
 JasPer-2.0
-KiCad-libraries-exception
 LAL-1.2
 LAL-1.3
 LGPL-2.0	deprecated	osi
@@ -274,6 +274,8 @@ LPPL-1.1
 LPPL-1.2	fsf
 LPPL-1.3a	fsf
 LPPL-1.3c	osi
+LZMA-SDK-9.11-to-9.20
+LZMA-SDK-9.22
 Latex2e
 Leptonica
 LiLiQ-P-1.1	osi
@@ -295,10 +297,12 @@ MPL-1.0	osi
 MPL-1.1	fsf	osi
 MPL-2.0	fsf	osi
 MPL-2.0-no-copyleft-exception	osi
+MS-LPL
 MS-PL	fsf	osi
 MS-RL	fsf	osi
 MTLL
 MakeIndex
+Minpack
 MirOS	osi
 Motosoto	osi
 MulanPSL-1.0
@@ -311,6 +315,7 @@ NBPL-1.0
 NCGL-UK-2.0
 NCSA	fsf	osi
 NGPL	osi
+NICTA-1.0
 NIST-PD
 NIST-PD-fallback
 NLOD-1.0
@@ -385,6 +390,7 @@ PolyForm-Noncommercial-1.0.0
 PolyForm-Small-Business-1.0.0
 PostgreSQL	osi
 Python-2.0	fsf	osi
+Python-2.0.1
 QPL-1.0	fsf	osi
 Qhull
 RHeCos-1.1
@@ -479,6 +485,7 @@ iMatix	fsf
 libpng-2.0
 libselinux-1.0
 libtiff
+mpi-permissive
 mpich2
 mplus
 psfrag
