@@ -24,6 +24,7 @@ APSL-1.1	osi
 APSL-1.2	osi
 APSL-2.0	fsf	osi
 Abstyles
+AdaCore-doc
 Adobe-2006
 Adobe-Glyph
 Afmparse
@@ -56,6 +57,10 @@ BSD-3-Clause-Open-MPI
 BSD-4-Clause	fsf
 BSD-4-Clause-Shortened
 BSD-4-Clause-UC
+BSD-4.3RENO
+BSD-4.3TAHOE
+BSD-Advertising-Acknowledgement
+BSD-Attribution-HPND-disclaimer
 BSD-Protection
 BSD-Source-Code
 BSL-1.0	fsf	osi
@@ -66,9 +71,11 @@ Barr
 Beerware
 BitTorrent-1.0
 BitTorrent-1.1	fsf
+Bitstream-Charter
 Bitstream-Vera
 BlueOak-1.0.0
 Borceux
+Brian-Gladman-3-Clause
 C-UDA-1.0
 CAL-1.0	osi
 CAL-1.0-Combined-Work-Exception	osi
@@ -99,6 +106,7 @@ CC-BY-NC-ND-3.0-IGO
 CC-BY-NC-ND-4.0
 CC-BY-NC-SA-1.0
 CC-BY-NC-SA-2.0
+CC-BY-NC-SA-2.0-DE
 CC-BY-NC-SA-2.0-FR
 CC-BY-NC-SA-2.0-UK
 CC-BY-NC-SA-2.5
@@ -140,6 +148,8 @@ CERN-OHL-1.2
 CERN-OHL-P-2.0	osi
 CERN-OHL-S-2.0	osi
 CERN-OHL-W-2.0	osi
+CFITSIO
+CMU-Mach
 CNRI-Jython
 CNRI-Python	osi
 CNRI-Python-GPL-Compatible
@@ -150,8 +160,10 @@ CPOL-1.02
 CUA-OPL-1.0	osi
 Caldera
 ClArtistic	fsf
+Clips
 Community-Spec-1.0
 Condor-1.1	fsf
+Cornell-Lossless-JPEG
 Crossword
 CrystalStacker
 Cube
@@ -232,14 +244,21 @@ GPL-3.0-with-autoconf-exception	deprecated
 Giftware
 Glide
 Glulxe
+Graphics-Gems
+HP-1986
 HPND	fsf	osi
+HPND-Markus-Kuhn
+HPND-export-US
 HPND-sell-variant
+HPND-sell-variant-MIT-disclaimer
 HTMLTIDY
 HaskellReport
 Hippocratic-2.1
 IBM-pibs
 ICU
+IEC-Code-Components-EULA
 IJG	fsf
+IJG-short
 IPA	fsf	osi
 IPL-1.0	fsf	osi
 ISC	fsf	osi
@@ -249,10 +268,12 @@ Info-ZIP
 Intel	fsf	osi
 Intel-ACPI
 Interbase-1.0
+JPL-image
 JPNIC
 JSON
 Jam	osi
 JasPer-2.0
+Kazlib
 Knuth-CTAN
 LAL-1.2
 LAL-1.3
@@ -269,6 +290,7 @@ LGPL-3.0+	deprecated	fsf	osi
 LGPL-3.0-only	fsf	osi
 LGPL-3.0-or-later	fsf	osi
 LGPLLR
+LOOP
 LPL-1.0	osi
 LPL-1.02	fsf	osi
 LPPL-1.0
@@ -290,6 +312,7 @@ MIT	fsf	osi
 MIT-0	osi
 MIT-CMU
 MIT-Modern-Variant	osi
+MIT-Wu
 MIT-advertising
 MIT-enna
 MIT-feh
@@ -304,6 +327,7 @@ MS-PL	fsf	osi
 MS-RL	fsf	osi
 MTLL
 MakeIndex
+Martin-Birgmeier
 Minpack
 MirOS	osi
 Motosoto	osi
@@ -342,6 +366,7 @@ OCCT-PL
 OCLC-2.0	osi
 ODC-By-1.0
 ODbL-1.0	fsf
+OFFIS
 OFL-1.0	fsf
 OFL-1.0-RFN
 OFL-1.0-no-RFN
@@ -380,6 +405,7 @@ OSL-1.1	fsf
 OSL-2.0	fsf	osi
 OSL-2.1	fsf	osi
 OSL-3.0	fsf	osi
+OpenPBS-2.3
 OpenSSL	fsf
 PDDL-1.0
 PHP-3.0	osi
@@ -394,6 +420,7 @@ PostgreSQL	osi
 Python-2.0	fsf	osi
 Python-2.0.1
 QPL-1.0	fsf	osi
+QPL-1.0-INRIA-2004
 Qhull
 RHeCos-1.1
 RPL-1.1	osi
@@ -431,14 +458,20 @@ Spencer-94
 Spencer-99
 StandardML-NJ	deprecated	fsf
 SugarCRM-1.1.3
+SunPro
+Symlinks
 TAPR-OHL-1.0
 TCL
 TCP-wrappers
 TMate
 TORQUE-1.1
 TOSL
+TPDL
+TPL-1.0
+TTWL
 TU-Berlin-1.0
 TU-Berlin-2.0
+UCAR
 UCL-1.0	osi
 UPL-1.0	fsf	osi
 Unicode-DFS-2015
@@ -494,7 +527,10 @@ mpich2
 mplus
 psfrag
 psutils
+snprintf
+w3m
 wxWindows	deprecated	osi
 xinetd	fsf
+xlock
 xpp
 zlib-acknowledgement
