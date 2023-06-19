@@ -9,9 +9,6 @@ It can also insert an `SPDX ID`_ to the buffer.
 .. image:: https://github.com/hattya/license.vim/actions/workflows/ci.yml/badge.svg
    :target: https://github.com/hattya/license.vim/actions/workflows/ci.yml
 
-.. image:: https://semaphoreci.com/api/v1/hattya/license-vim/branches/master/badge.svg
-   :target: https://semaphoreci.com/hattya/license-vim
-
 .. image:: https://ci.appveyor.com/api/projects/status/qwqdt6wm9y03f9ar/branch/master?svg=true
    :target: https://ci.appveyor.com/project/hattya/license-vim
 
