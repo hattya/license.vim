@@ -1,8 +1,8 @@
 Describe spdx
   Describe #complete()
     Before all
-      let nlic = 505
-      let nexc = 48
+      let nlic = 526
+      let nexc = 55
     End
 
     After each
@@ -26,7 +26,7 @@ Describe spdx
     End
 
     It lists only OSI-approved license identifiers
-      let n = 127
+      let n = 128
       let b:spdx_license = ['osi']
       Assert LengthOf(license#spdx#complete('', 'License ', 8), n)
 
@@ -58,7 +58,7 @@ Describe spdx
       Assert   Equals(license#spdx#complete('apac', 'License apac',                            12), ['Apache-1.0', 'Apache-1.1', 'Apache-2.0'])
       Assert   Equals(license#spdx#complete('w',    'License Apache-2.0 w',                    20), ['WITH'])
       Assert LengthOf(license#spdx#complete('',     'License Apache-2.0 WITH ',                24), nexc)
-      Assert   Equals(license#spdx#complete('ll',   'License Apache-2.0 WITH ll',              26), ['LLVM-exception'])
+      Assert   Equals(license#spdx#complete('llv',  'License Apache-2.0 WITH llv',             26), ['LLVM-exception'])
       Assert   Equals(license#spdx#complete('',     'License Apache-2.0 WITH LLVM-exception ', 39), ['AND', 'OR'])
       Assert   Equals(license#spdx#complete('',     'License Apache-2.0 WITH',                 19), ['AND', 'OR', 'WITH'])
       Assert LengthOf(license#spdx#complete('',     'License Apache-2.0 WITH',                  8), nlic)
@@ -86,7 +86,7 @@ Describe spdx
       Assert   Equals(license#spdx#complete('apac',                            'apac',                             4), ['Apache-1.0', 'Apache-1.1', 'Apache-2.0'])
       Assert   Equals(license#spdx#complete('Apache-2.0 w',                    'Apache-2.0 w',                    12), ['Apache-2.0 WITH'])
       Assert LengthOf(license#spdx#complete('Apache-2.0 WITH ',                'Apache-2.0 WITH ',                16), nexc)
-      Assert   Equals(license#spdx#complete('Apache-2.0 WITH ll',              'Apache-2.0 WITH ll',              18), ['Apache-2.0 WITH LLVM-exception'])
+      Assert   Equals(license#spdx#complete('Apache-2.0 WITH llv',             'Apache-2.0 WITH llv',             19), ['Apache-2.0 WITH LLVM-exception'])
       Assert   Equals(license#spdx#complete('Apache-2.0 WITH LLVM-exception ', 'Apache-2.0 WITH LLVM-exception ', 31), ['Apache-2.0 WITH LLVM-exception AND', 'Apache-2.0 WITH LLVM-exception OR'])
       Assert   Equals(license#spdx#complete('Apache-2.0 ',                     'Apache-2.0 WITH',                 11), ['Apache-2.0 AND', 'Apache-2.0 OR', 'Apache-2.0 WITH'])
       Assert LengthOf(license#spdx#complete('',                                'Apache-2.0 WITH',                  0), nlic)
