@@ -5,6 +5,7 @@ Autoconf-exception-3.0
 Autoconf-exception-generic
 Autoconf-exception-generic-3.0
 Autoconf-exception-macro
+Bison-exception-1.24
 Bison-exception-2.2
 Bootloader-exception
 CLISP-exception-2.0
@@ -17,6 +18,7 @@ GCC-exception-2.0
 GCC-exception-2.0-note
 GCC-exception-3.1
 GNAT-exception
+GNOME-examples-exception
 GNU-compiler-exception
 GPL-3.0-interface-exception
 GPL-3.0-linking-exception
@@ -24,6 +26,7 @@ GPL-3.0-linking-source-exception
 GPL-CC-1.0
 GStreamer-exception-2005
 GStreamer-exception-2008
+Gmsh-exception
 KiCad-libraries-exception
 LGPL-3.0-linking-exception
 LLGPL
@@ -51,6 +54,7 @@ Universal-FOSS-exception-1.0
 WxWindows-exception-3.1
 cryptsetup-OpenSSL-exception
 eCos-exception-2.0
+fmt-exception
 freertos-exception-2.0
 gnu-javamail-exception
 i2p-gpl-java-exception
