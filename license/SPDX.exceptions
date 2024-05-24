@@ -1,5 +1,6 @@
 389-exception
 Asterisk-exception
+Asterisk-linking-protocols-exception
 Autoconf-exception-2.0
 Autoconf-exception-3.0
 Autoconf-exception-generic
@@ -38,11 +39,13 @@ Nokia-Qt-exception-1.1	deprecated
 OCCT-exception-1.0
 OCaml-LGPL-linking-exception
 OpenJDK-assembly-exception-1.0
+PCRE2-exception
 PS-or-PDF-font-exception-20170817
 QPL-1.0-INRIA-2004-exception
 Qt-GPL-exception-1.0
 Qt-LGPL-exception-1.1
 Qwt-exception-1.0
+RRDtool-FLOSS-exception-2.0
 SANE-exception
 SHL-2.0
 SHL-2.1
