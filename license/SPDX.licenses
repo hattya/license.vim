@@ -200,6 +200,8 @@ DOC
 DRL-1.0
 DRL-1.1
 DSDP
+DocBook-Schema
+DocBook-XML
 Dotseqn
 ECL-1.0	osi
 ECL-2.0	fsf	osi
@@ -279,6 +281,7 @@ Glide
 Glulxe
 Graphics-Gems
 Gutmann
+HIDAPI
 HP-1986
 HP-1989
 HPND	fsf	osi
@@ -289,6 +292,7 @@ HPND-Intel
 HPND-Kevlin-Henney
 HPND-MIT-disclaimer
 HPND-Markus-Kuhn
+HPND-Netrek
 HPND-Pbmplus
 HPND-UC
 HPND-UC-export-US
@@ -428,7 +432,7 @@ NRL
 NTP	osi
 NTP-0
 Naumen	osi
-Net-SNMP
+Net-SNMP	deprecated
 NetCDF
 Newsletr
 Nokia	fsf	osi
@@ -511,6 +515,7 @@ RSA-MD
 RSCPL	osi
 Rdisc
 Ruby	fsf
+Ruby-pty
 SAX-PD
 SAX-PD-2.0
 SCEA
@@ -568,6 +573,7 @@ UCL-1.0	osi
 UMich-Merit
 UPL-1.0	fsf	osi
 URT-RLE
+Ubuntu-font-1.0
 Unicode-3.0	osi
 Unicode-DFS-2015
 Unicode-DFS-2016	osi
@@ -579,13 +585,14 @@ VSL-1.0	osi
 Vim	fsf
 W3C	fsf	osi
 W3C-19980720
-W3C-20150513
+W3C-20150513	osi
 WTFPL	fsf
 Watcom-1.0	osi
 Widget-Workshop
 Wsuipa
 X11	fsf
 X11-distribute-modifications-variant
+X11-swapped
 XFree86-1.1	fsf
 XSkat
 Xdebug-1.03

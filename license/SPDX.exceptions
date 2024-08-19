@@ -57,6 +57,7 @@ Universal-FOSS-exception-1.0
 WxWindows-exception-3.1
 cryptsetup-OpenSSL-exception
 eCos-exception-2.0
+erlang-otp-linking-exception
 fmt-exception
 freertos-exception-2.0
 gnu-javamail-exception
@@ -64,6 +65,7 @@ i2p-gpl-java-exception
 libpri-OpenH323-exception
 mif-exception
 openvpn-openssl-exception
+romic-exception
 stunnel-exception
 u-boot-exception-2.0
 vsftpd-openssl-exception

@@ -1,8 +1,8 @@
 Describe spdx
   Describe #complete()
     Before all
-      let nlic = 628
-      let nexc = 69
+      let nlic = 634
+      let nexc = 71
     End
 
     After each
@@ -13,7 +13,7 @@ Describe spdx
       Assert LengthOf(license#spdx#complete('', 'License ', 8), nlic)
 
       let b:spdx_license = ['deprecated']
-      Assert LengthOf(license#spdx#complete('', 'License ', 8), nlic + 31)
+      Assert LengthOf(license#spdx#complete('', 'License ', 8), nlic + 32)
     End
 
     It lists only free software license identifiers
@@ -26,7 +26,7 @@ Describe spdx
     End
 
     It lists only OSI-approved license identifiers
-      let n = 131
+      let n = 132
       let b:spdx_license = ['osi']
       Assert LengthOf(license#spdx#complete('', 'License ', 8), n)
 
