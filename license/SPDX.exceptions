@@ -9,6 +9,7 @@ Autoconf-exception-macro
 Bison-exception-1.24
 Bison-exception-2.2
 Bootloader-exception
+CGAL-linking-exception
 CLISP-exception-2.0
 Classpath-exception-2.0
 DigiRule-FOSS-exception
@@ -21,6 +22,7 @@ GCC-exception-3.1
 GNAT-exception
 GNOME-examples-exception
 GNU-compiler-exception
+GPL-3.0-389-ds-base-exception
 GPL-3.0-interface-exception
 GPL-3.0-linking-exception
 GPL-3.0-linking-source-exception
@@ -28,6 +30,7 @@ GPL-CC-1.0
 GStreamer-exception-2005
 GStreamer-exception-2008
 Gmsh-exception
+Independent-modules-exception
 KiCad-libraries-exception
 LGPL-3.0-linking-exception
 LLGPL
@@ -61,9 +64,11 @@ erlang-otp-linking-exception
 fmt-exception
 freertos-exception-2.0
 gnu-javamail-exception
+harbour-exception
 i2p-gpl-java-exception
 libpri-OpenH323-exception
 mif-exception
+mxml-exception
 openvpn-openssl-exception
 romic-exception
 stunnel-exception

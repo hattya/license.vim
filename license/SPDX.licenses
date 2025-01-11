@@ -92,6 +92,7 @@ Bitstream-Charter
 Bitstream-Vera
 BlueOak-1.0.0	osi
 Boehm-GC
+Boehm-GC-without-fee
 Borceux
 Brian-Gladman-2-Clause
 Brian-Gladman-3-Clause
@@ -151,6 +152,8 @@ CC-BY-SA-3.0-DE
 CC-BY-SA-3.0-IGO
 CC-BY-SA-4.0	fsf
 CC-PDDC
+CC-PDM-1.0
+CC-SA-1.0
 CC0-1.0	fsf
 CDDL-1.0	fsf	osi
 CDDL-1.1
@@ -201,6 +204,7 @@ DRL-1.0
 DRL-1.1
 DSDP
 DocBook-Schema
+DocBook-Stylesheet
 DocBook-XML
 Dotseqn
 ECL-1.0	osi
@@ -324,6 +328,7 @@ ImageMagick
 Imlib2	fsf
 Info-ZIP
 Inner-Net-2.0
+InnoSetup
 Intel	fsf	osi
 Intel-ACPI
 Interbase-1.0
@@ -374,9 +379,11 @@ Linux-man-pages-copyleft
 Linux-man-pages-copyleft-2-para
 Linux-man-pages-copyleft-var
 Lucida-Bitmap-Fonts
+MIPS
 MIT	fsf	osi
 MIT-0	osi
 MIT-CMU
+MIT-Click
 MIT-Festival
 MIT-Khronos-old
 MIT-Modern-Variant	osi
@@ -529,6 +536,7 @@ SHL-0.51
 SISSL	fsf	osi
 SISSL-1.2
 SL
+SMAIL-GPL
 SMLNJ	fsf
 SMPPL
 SNIA
@@ -542,6 +550,7 @@ Saxpath
 SchemeReport
 Sendmail
 Sendmail-8.23
+Sendmail-Open-Source-1.1
 SimPL-2.0	osi
 Sleepycat	fsf	osi
 Soundex
@@ -568,6 +577,8 @@ TTYP0
 TU-Berlin-1.0
 TU-Berlin-2.0
 TermReadKey
+ThirdEye
+TrustedQSL
 UCAR
 UCL-1.0	osi
 UMich-Merit
@@ -611,6 +622,7 @@ Zimbra-1.3	fsf
 Zimbra-1.4
 Zlib	fsf	osi
 any-OSI
+any-OSI-perl-modules
 bcrypt-Solar-Designer
 blessing
 bzip2-1.0.5	deprecated
@@ -629,6 +641,7 @@ eGenix
 etalab-2.0
 fwlw
 gSOAP-1.3b
+generic-xts
 gnuplot	fsf
 gtkbook
 hdparm
@@ -657,6 +670,7 @@ swrule
 threeparttable
 ulem
 w3m
+wwl
 wxWindows	deprecated	osi
 xinetd	fsf
 xkeyboard-config-Zinoviev
