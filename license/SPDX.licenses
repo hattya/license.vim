@@ -45,6 +45,8 @@ Artistic-1.0	osi
 Artistic-1.0-Perl	osi
 Artistic-1.0-cl8	osi
 Artistic-2.0	fsf	osi
+Artistic-dist
+Aspell-RU
 BSD-1-Clause	osi
 BSD-2-Clause	osi
 BSD-2-Clause-Darwin
@@ -53,6 +55,7 @@ BSD-2-Clause-NetBSD	deprecated
 BSD-2-Clause-Patent	osi
 BSD-2-Clause-Views
 BSD-2-Clause-first-lines
+BSD-2-Clause-pkgconf-disclaimer
 BSD-3-Clause	fsf	osi
 BSD-3-Clause-Attribution
 BSD-3-Clause-Clear	fsf
@@ -193,6 +196,7 @@ Condor-1.1	fsf
 Cornell-Lossless-JPEG
 Cronyx
 Crossword
+CryptoSwift
 CrystalStacker
 Cube
 D-FSL-1.0
@@ -203,6 +207,7 @@ DOC
 DRL-1.0
 DRL-1.1
 DSDP
+DocBook-DTD
 DocBook-Schema
 DocBook-Stylesheet
 DocBook-XML
@@ -228,7 +233,10 @@ FSFAP	fsf
 FSFAP-no-warranty-disclaimer
 FSFUL
 FSFULLR
+FSFULLRSD
 FSFULLRWD
+FSL-1.1-ALv2
+FSL-1.1-MIT
 FTL	fsf
 Fair	osi
 Ferguson-Twofish
@@ -280,11 +288,13 @@ GPL-3.0-only	fsf	osi
 GPL-3.0-or-later	fsf	osi
 GPL-3.0-with-GCC-exception	deprecated	osi
 GPL-3.0-with-autoconf-exception	deprecated
+Game-Programming-Gems
 Giftware
 Glide
 Glulxe
 Graphics-Gems
 Gutmann
+HDF5
 HIDAPI
 HP-1986
 HP-1989
@@ -436,6 +446,7 @@ NPL-1.0	fsf
 NPL-1.1	fsf
 NPOSL-3.0	osi
 NRL
+NTIA-PD
 NTP	osi
 NTP-0
 Naumen	osi
@@ -540,11 +551,13 @@ SMAIL-GPL
 SMLNJ	fsf
 SMPPL
 SNIA
+SOFA
 SPL-1.0	fsf	osi
 SSH-OpenSSH
 SSH-short
 SSLeay-standalone
 SSPL-1.0
+SUL-1.0
 SWL
 Saxpath
 SchemeReport
@@ -591,6 +604,8 @@ Unicode-DFS-2016	osi
 Unicode-TOU
 UnixCrypt
 Unlicense	fsf	osi
+Unlicense-libtelnet
+Unlicense-libwhirlpool
 VOSTROM
 VSL-1.0	osi
 Vim	fsf
@@ -646,6 +661,8 @@ gnuplot	fsf
 gtkbook
 hdparm
 iMatix	fsf
+jove
+libpng-1.6.35
 libpng-2.0
 libselinux-1.0
 libtiff
@@ -653,10 +670,12 @@ libutil-David-Nugent
 lsof
 magaz
 mailprio
+man2html
 metamail
 mpi-permissive
 mpich2
 mplus
+ngrep
 pkgconf
 pnmstitch
 psfrag

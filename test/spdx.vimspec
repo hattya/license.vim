@@ -1,8 +1,8 @@
 Describe spdx
   Describe #complete()
     Before all
-      let nlic = 648
-      let nexc = 76
+      let nlic = 667
+      let nexc = 78
     End
 
     After each
