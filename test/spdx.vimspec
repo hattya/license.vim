@@ -1,8 +1,8 @@
 Describe spdx
   Describe #complete()
     Before all
-      let nlic = 667
-      let nexc = 78
+      let nlic = 695
+      let nexc = 83
     End
 
     After each
@@ -26,7 +26,7 @@ Describe spdx
     End
 
     It lists only OSI-approved license identifiers
-      let n = 132
+      let n = 136
       let b:spdx_license = ['osi']
       Assert LengthOf(license#spdx#complete('', 'License ', 8), n)
 
@@ -45,7 +45,7 @@ Describe spdx
 
     It lists license identifiers for :command
       Assert LengthOf(license#spdx#complete('',    'License ',         8), nlic)
-      Assert   Equals(license#spdx#complete('is',  'License is',      10), ['ISC', 'ISC-Veillard'])
+      Assert   Equals(license#spdx#complete('is',  'License is',      10), ['ISC', 'ISC-Veillard', 'ISO-permission'])
       Assert   Equals(license#spdx#complete('',    'License ISC ',    12), ['AND', 'OR', 'WITH'])
       Assert   Equals(license#spdx#complete('o',   'License ISC o',   13), ['OR'])
       Assert LengthOf(license#spdx#complete('',    'License ISC OR ', 15), nlic)
@@ -73,7 +73,7 @@ Describe spdx
 
     It lists license identifiers for input()
       Assert LengthOf(license#spdx#complete('',        '',        0), nlic)
-      Assert   Equals(license#spdx#complete('is',      'is',      2), ['ISC', 'ISC-Veillard'])
+      Assert   Equals(license#spdx#complete('is',      'is',      2), ['ISC', 'ISC-Veillard', 'ISO-permission'])
       Assert   Equals(license#spdx#complete('ISC ',    'ISC ',    4), ['ISC AND', 'ISC OR', 'ISC WITH'])
       Assert   Equals(license#spdx#complete('ISC o',   'ISC o',   5), ['ISC OR'])
       Assert LengthOf(license#spdx#complete('ISC OR ', 'ISC OR ', 7), nlic)
