@@ -59,6 +59,7 @@ BSD-2-Clause-Patent	osi
 BSD-2-Clause-Views
 BSD-2-Clause-first-lines
 BSD-2-Clause-pkgconf-disclaimer
+BSD-2-Clause-pos-unchanged
 BSD-3-Clause	fsf	osi
 BSD-3-Clause-Attribution
 BSD-3-Clause-Clear	fsf
@@ -70,6 +71,7 @@ BSD-3-Clause-No-Nuclear-License
 BSD-3-Clause-No-Nuclear-License-2014
 BSD-3-Clause-No-Nuclear-Warranty
 BSD-3-Clause-Open-MPI	osi
+BSD-3-Clause-OpenWebUI
 BSD-3-Clause-Sun
 BSD-3-Clause-Tso
 BSD-3-Clause-acpica
@@ -85,9 +87,12 @@ BSD-Inferno-Nettverk
 BSD-Mark-Modifications
 BSD-Protection
 BSD-Source-Code
+BSD-Source-Code-no-disclaimer
+BSD-Source-alt-GPL
 BSD-Source-beginning-file
 BSD-Systemics
 BSD-Systemics-W3Works
+BSD-ask-to-endorse	osi
 BSL-1.0	fsf	osi
 BUSL-1.1
 Baekmuk
@@ -104,7 +109,9 @@ Boehm-GC-without-fee
 Borceux
 Brian-Gladman-2-Clause
 Brian-Gladman-3-Clause
+Brian-Gladman-3-Clause-no-conversion
 Buddy
+Bugroff
 C-UDA-1.0
 CAL-1.0	osi
 CAL-1.0-Combined-Work-Exception	osi
@@ -127,6 +134,7 @@ CC-BY-NC-2.0
 CC-BY-NC-2.5
 CC-BY-NC-3.0
 CC-BY-NC-3.0-DE
+CC-BY-NC-3.0-IGO
 CC-BY-NC-4.0
 CC-BY-NC-ND-1.0
 CC-BY-NC-ND-2.0
@@ -166,7 +174,7 @@ CC-PDM-1.0
 CC-SA-1.0
 CC0-1.0	fsf
 CDDL-1.0	fsf	osi
-CDDL-1.1
+CDDL-1.1	osi
 CDL-1.0
 CDLA-Permissive-1.0
 CDLA-Permissive-2.0
@@ -187,7 +195,7 @@ CMU-Mach
 CMU-Mach-nodoc
 CNRI-Jython
 CNRI-Python	osi
-CNRI-Python-GPL-Compatible
+CNRI-Python-GPL-Compatible	osi
 COIL-1.0
 CPAL-1.0	fsf	osi
 CPL-1.0	fsf	osi
@@ -239,6 +247,7 @@ ErlPL-1.1
 Eurosym
 FBM
 FDK-AAC
+FDK-MPEG-H
 FSFAP	fsf
 FSFAP-no-warranty-disclaimer
 FSFUL
@@ -337,6 +346,7 @@ HPND-sell-variant-critical-systems
 HTMLTIDY
 HaskellReport
 Hippocratic-2.1
+Hippocratic-3.0-core
 IBM-pibs
 ICU	osi
 IEC-Code-Components-EULA
@@ -350,6 +360,7 @@ ISO-permission
 ImageMagick
 Imlib2	fsf
 Info-ZIP
+Informatica
 Inner-Net-2.0
 InnoSetup
 Intel	fsf	osi
@@ -429,6 +440,7 @@ MS-LPL
 MS-PL	fsf	osi
 MS-RL	fsf	osi
 MTLL
+MVT-1.1
 Mackerras-3-Clause
 Mackerras-3-Clause-acknowledgment
 MakeIndex
@@ -541,7 +553,7 @@ PolyForm-Noncommercial-1.0.0
 PolyForm-Small-Business-1.0.0
 PostgreSQL	osi
 Python-2.0	fsf	osi
-Python-2.0.1
+Python-2.0.1	osi
 QPL-1.0	fsf	osi
 QPL-1.0-INRIA-2004
 Qhull
@@ -665,6 +677,7 @@ Zimbra-1.4
 Zlib	fsf	osi
 any-OSI
 any-OSI-perl-modules
+atc-game
 bcrypt-Solar-Designer
 blessing
 bzip2-1.0.5	deprecated
@@ -673,7 +686,7 @@ check-cvs
 checkmk
 copyleft-next-0.3.0
 copyleft-next-0.3.1
-curl
+curl	osi
 cve-tou
 diffmark
 dtoa
